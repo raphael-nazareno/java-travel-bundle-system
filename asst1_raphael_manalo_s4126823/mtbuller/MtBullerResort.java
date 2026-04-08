@@ -74,6 +74,15 @@ public class MtBullerResort {
         }
     }
 
+    public Customer findCustomerById(int id) {
+        for (Customer c : customers) {
+            if (c.getCustomerID() == id) {
+                return c;
+            }
+        }
+        return null;
+    }
+
     // Accommodation Methods
     public void addAccommodation(Accommodation a) {
         accommodations.add(a);
