@@ -9,6 +9,7 @@ public class MtBullerResort {
     private ArrayList<TravelBundle> travelBundles;
 
     public MtBullerResort() {
+        // Array Creation
         customers = new ArrayList<>();
         accommodations = new ArrayList<>();
         travelBundles = new ArrayList<>();
@@ -136,7 +137,29 @@ public class MtBullerResort {
         System.out.println("How long are you staying(days)?: ");
         int durationDays = scanner.nextInt();
 
+        // New Bundle Object
         TravelBundle bundle = new TravelBundle(customer, startDate, durationDays);
+
+        // User Input For Accommodation
+        listAvailableAccommodations();
+        System.out.println("Enter Accommodation ID: ");
+        int accommodationID = scanner.nextInt();
+
+        Accommodation accommodation = findAccommodationById(accommodationID);
+        if (accommodation == null) {
+            System.out.println("Accommodation not found!");
+            return;
+        }
+        if (!accommodation.isAvailable()) {
+            System.out.println("Accommodation is not available");
+            return;
+        }
+
+        // Add accommodation to Bundle and set accommodation to Unavailable
+        bundle.addAccommodationToBundle(accommodation);
+        accommodation.setAvailable(false);
+
+        addBundle(bundle);
 
     }
 }
