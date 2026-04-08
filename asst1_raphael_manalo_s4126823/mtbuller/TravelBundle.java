@@ -10,6 +10,8 @@ public class TravelBundle {
     private Customer customer;
     private Accommodation accommodation;
 
+    private LiftPass liftPass;
+
     public TravelBundle(Customer customer, String startDate, int durationDays) {
         this.bundleID = nextID++;
 
