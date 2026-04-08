@@ -35,4 +35,11 @@ public class MtBullerResort {
         }
     }
 
+    public void listAvailableAccommodations() {
+        for (Accommodation a : accommodations)
+            if (a.isAvailable()) {
+                System.out.println(a);
+            }
+    }
+
 }
