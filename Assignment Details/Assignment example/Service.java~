@@ -1,0 +1,24 @@
+public class Service{
+  private String type;
+  private double price;
+  
+  public Service(){
+  }
+  public Service(String type, double price){
+    this.type = type;
+    this.price = price;
+  }
+  
+  public double getPrice(){
+    return price;
+  }
+   public String getType(){
+    return type;
+  }
+  public void setPrice(double price){
+     this.price = price;
+  }
+  public String toString(){
+    return "Service: " + type + " " + price;
+  }
+}
