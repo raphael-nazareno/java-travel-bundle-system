@@ -3,20 +3,21 @@ package mtbuller;
 public class Customer {
 
     private int customerID;
-    static int nextID = 1;
+    private static int nextID = 1;
 
     private String customerName;
     private String customerGender;
     private int customerAge;
-    private SkiingLevel SkiingLevel;
+    private SkiingLevel skiingLevel;
 
-    public Customer(int nextID, String customerName, int customerAge, String customerGender,
+    public Customer(String customerName, int customerAge, String customerGender,
             SkiingLevel SkiingLevel) {
-        customerID = nextID++;
+        this.customerID = nextID++;
+
         this.customerName = customerName;
         this.customerAge = customerAge;
         this.customerGender = customerGender;
-        this.SkiingLevel = SkiingLevel;
+        this.skiingLevel = SkiingLevel;
 
     }
 

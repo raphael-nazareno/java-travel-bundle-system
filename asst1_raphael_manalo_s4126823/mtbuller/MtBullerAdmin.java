@@ -6,10 +6,10 @@ public class MtBullerAdmin {
 
         MtBullerResort resort = new MtBullerResort();
 
-        Customer alice = new Customer(1, "Alice Piper", 23, "Female",
+        Customer alice = new Customer("Alice Piper", 23, "Female",
                 SkiingLevel.BEGINNER);
 
-        Customer grace = new Customer(2, "Grace Parker", 23, "Female",
+        Customer grace = new Customer("Grace Parker", 23, "Female",
                 SkiingLevel.INTERMEDIATE);
 
         resort.addCustomer(alice);
