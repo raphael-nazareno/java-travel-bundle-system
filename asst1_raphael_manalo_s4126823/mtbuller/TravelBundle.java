@@ -29,6 +29,10 @@ public class TravelBundle {
         this.liftPass = l;
     }
 
+    public int getBundleID() {
+        return this.bundleID;
+    }
+
     public String toString() {
         String customerName = customer.getCustomerName();
         String accommodationText = (accommodation != null) ? accommodation.toString()
