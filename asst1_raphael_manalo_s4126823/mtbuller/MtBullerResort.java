@@ -13,4 +13,10 @@ public class MtBullerResort {
         customers.add(c);
     }
 
+    public void listCustomers() {
+        for (Customer c : customers) {
+            System.out.println(c);
+        }
+    }
+
 }
