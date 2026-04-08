@@ -134,7 +134,7 @@ public class MtBullerResort {
         System.out.println("Enter your arrival date: ");
         String startDate = scanner.nextLine();
 
-        System.out.println("How long are you staying(days)?: ");
+        System.out.println("Enter stay duration in days: ");
         int durationDays = scanner.nextInt();
 
         // New Bundle Object
@@ -159,7 +159,9 @@ public class MtBullerResort {
         bundle.addAccommodationToBundle(accommodation);
         accommodation.setAvailable(false);
 
+        // Adds newly created bundle to bundle array
         addBundle(bundle);
+        System.out.println("Bundle created successfully.");
 
     }
 }
