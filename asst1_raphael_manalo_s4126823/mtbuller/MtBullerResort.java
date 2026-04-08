@@ -29,4 +29,10 @@ public class MtBullerResort {
         accommodations.add(a);
     }
 
+    public void listAllAccommodations() {
+        for (Accommodation a : accommodations) {
+            System.out.println(a);
+        }
+    }
+
 }
