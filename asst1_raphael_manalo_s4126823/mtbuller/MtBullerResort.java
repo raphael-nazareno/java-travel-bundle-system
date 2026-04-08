@@ -11,6 +11,39 @@ public class MtBullerResort {
         customers = new ArrayList<>();
         accommodations = new ArrayList<>();
         travelBundles = new ArrayList<>();
+
+        populateAccommodations();
+    }
+
+    // Initial Arrays
+    // Accommodations
+    public void populateAccommodations() {
+
+        Accommodation windsor_classic = new HotelRoom(101, 150);
+        Accommodation windsor_deluxe = new HotelRoom(102, 300);
+        Accommodation windsor_suite = new HotelRoom(103, 500);
+        Accommodation windsor_grand_suite = new HotelRoom(104, 1000);
+
+        Accommodation metropolitan_studio = new Apartment(201, 200);
+        Accommodation metropolitan_single = new Apartment(202, 275);
+        Accommodation metropolitan_double = new Apartment(203, 325);
+
+        Accommodation garden_village_single = new LodgeRoom(301, 350);
+        Accommodation garden_village_double = new LodgeRoom(302, 450);
+        Accommodation garden_village_family = new LodgeRoom(303, 600);
+
+        addAccommodation(windsor_classic);
+        addAccommodation(windsor_deluxe);
+        addAccommodation(windsor_suite);
+        addAccommodation(windsor_grand_suite);
+
+        addAccommodation(metropolitan_studio);
+        addAccommodation(metropolitan_single);
+        addAccommodation(metropolitan_double);
+
+        addAccommodation(garden_village_single);
+        addAccommodation(garden_village_double);
+        addAccommodation(garden_village_family);
     }
 
     // Customer Methods
@@ -39,6 +72,12 @@ public class MtBullerResort {
         for (Accommodation a : accommodations)
             if (a.isAvailable()) {
                 System.out.println(a);
+            }
+    }
+
+    public Accommodation findAccommodationById(int id) {
+        for (Accommodation a : accommodations)
+            if (id == accommodation.getID) {
             }
     }
 
