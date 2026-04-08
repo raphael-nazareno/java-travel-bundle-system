@@ -21,11 +21,30 @@ public class Customer {
 
     }
 
+    public int getCustomerID() {
+        return this.customerID;
+    }
+
     public String getCustomerName() {
         return this.customerName;
     }
 
+    public int getCustomerAge() {
+        return this.customerAge;
+    }
+
+    public String getCustomerGender() {
+        return this.customerGender;
+    }
+
+    public SkiingLevel getSkiingLevel() {
+        return this.skiingLevel;
+    }
+
+    @Override
     public String toString() {
-        return String.format("This is %s, with customerID: %d", customerName, customerID);
+        return String.format(
+                "ID: %d | Name: %s | Age: %d | Gender: %s | Level: %s",
+                customerID, customerName, customerAge, customerGender, skiingLevel);
     }
 }
