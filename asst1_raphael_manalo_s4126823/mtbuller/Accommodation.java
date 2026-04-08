@@ -27,4 +27,11 @@ public abstract class Accommodation {
         return this.available;
     }
 
+    @Override
+    public String toString() {
+        String availabilityText = available ? "Yes" : "No";
+
+        return String.format("ID: %d | Price (per night): %.2f | Availability %s",
+                id, pricePerNight, availabilityText);
+    }
 }
