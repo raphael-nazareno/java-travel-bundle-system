@@ -164,4 +164,14 @@ public class MtBullerResort {
         System.out.println("Bundle created successfully.");
 
     }
+
+    public void listBundles() {
+        if (travelBundles.isEmpty()) {
+            System.out.println("No bundles found!");
+            return;
+        }
+        for (TravelBundle b : travelBundles) {
+            System.out.println(b);
+        }
+    }
 }
