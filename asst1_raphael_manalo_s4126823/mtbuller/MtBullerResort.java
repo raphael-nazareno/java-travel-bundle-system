@@ -9,6 +9,8 @@ public class MtBullerResort {
 
     public MtBullerResort() {
         customers = new ArrayList<>();
+        accommodations = new ArrayList<>();
+        travelBundles = new ArrayList<>();
     }
 
     public void addCustomer(Customer c) {
