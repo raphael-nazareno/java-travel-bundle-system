@@ -6,17 +6,20 @@ public class Customer {
     private String customerDOB;
     private String customerGender;
     private int customerAge;
+    private SkiingLevel SkiingLevel;
 
-    public enum skiingLevel {
-        Beginnering, Intermediate, Expert
+    public enum SkiingLevel {
+        BEGINNER, INTERMEDIATE, EXPERT
     }
 
-    public Customer(int customerID, String customerName, String customerDOB, int customerAge, String customerGender) {
+    public Customer(int customerID, String customerName, String customerDOB, int customerAge, String customerGender,
+            SkiingLevel SkiingLevel) {
         this.customerID = customerID;
         this.customerName = customerName;
         this.customerDOB = customerDOB;
         this.customerAge = customerAge;
         this.customerGender = customerGender;
+        this.SkiingLevel = SkiingLevel;
 
     }
 
