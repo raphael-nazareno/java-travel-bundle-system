@@ -21,6 +21,14 @@ public class Customer {
 
     }
 
+    public String setCustomerName(String customerName) {
+        return customerName;
+    }
+
+    public String getCustomerName() {
+        return this.customerName;
+    }
+
     public String toString() {
         return String.format("This is %s, with customerID: %d", customerName, customerID);
     }
