@@ -1,6 +1,7 @@
 package mtbuller;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class MtBullerResort {
     private ArrayList<Customer> customers;
@@ -113,5 +114,29 @@ public class MtBullerResort {
     // Travel Bundle Methods
     public void addBundle(TravelBundle b) {
         travelBundles.add(b);
+    }
+
+    public void createBundle() {
+        // User Input for Bundle
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter your customer ID: ");
+        int customerID = scanner.nextInt();
+        scanner.nextLine();
+
+        Customer customer = findCustomerById(customerID);
+        if (customer == null) {
+            System.out.println("Customer not found.");
+            return;
+        }
+
+        System.out.println("Enter your arrival date: ");
+        String startDate = scanner.nextLine();
+
+        System.out.println("How long are you staying(days)?: ");
+        int durationDays = scanner.nextInt();
+
+        TravelBundle bundle = new TravelBundle(customer, startDate, durationDays);
+
     }
 }
