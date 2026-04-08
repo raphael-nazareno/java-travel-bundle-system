@@ -19,4 +19,8 @@ public class TravelBundle {
 
     }
 
+    public void addAccommodationToBundle(Accommodation a) {
+        this.accommodation = a;
+
+    }
 }
