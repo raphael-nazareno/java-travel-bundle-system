@@ -34,8 +34,11 @@ public class TravelBundle {
         String accommodationText = (accommodation != null) ? accommodation.toString()
                 : "No Booking Found";
 
+        String liftPassText = (liftPass != null) ? String.format("$%.2f", liftPass.calculatePrice())
+                : "N/A";
+
         return String.format(
-                "Bundle ID: %d | Customer Name: %s | Accommodation: %s | Start Date: %s | Duration(Days): %d",
-                bundleID, customerName, accommodationText, startDate, durationDays);
+                "Bundle ID: %d | Customer Name: %s | Accommodation: %s | Start Date: %s | Duration(Days): %d | Lift Pass: %s",
+                bundleID, customerName, accommodationText, startDate, durationDays, liftPassText);
     }
 }
