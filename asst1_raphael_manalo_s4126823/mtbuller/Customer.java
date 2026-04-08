@@ -21,10 +21,6 @@ public class Customer {
 
     }
 
-    public String setCustomerName(String customerName) {
-        return customerName;
-    }
-
     public String getCustomerName() {
         return this.customerName;
     }
