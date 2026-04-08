@@ -110,4 +110,8 @@ public class MtBullerResort {
         return null;
     }
 
+    // Travel Bundle Methods
+    public void addBundle(TravelBundle b) {
+        travelBundles.add(b);
+    }
 }
