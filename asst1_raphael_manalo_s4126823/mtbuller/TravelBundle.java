@@ -9,4 +9,14 @@ public class TravelBundle {
 
     private Customer customer;
     private Accommodation accommodation;
+
+    public TravelBundle(Customer customer, String startDate, int durationDays) {
+        this.bundleID = nextID++;
+
+        this.customer = customer;
+        this.startDate = startDate;
+        this.durationDays = durationDays;
+
+    }
+
 }
