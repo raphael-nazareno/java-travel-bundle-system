@@ -197,5 +197,12 @@ public class MtBullerResort {
             return;
         }
 
+        System.out.println("Enter Lift Pass length in days: ");
+        int numberOfDays = scanner.nextInt();
+
+        LiftPass liftPass = new LiftPass(numberOfDays);
+
+        travelBundle.addLiftPassToBundle(liftPass);
+        System.out.println("Lift pass added successfully.");
     }
 }
