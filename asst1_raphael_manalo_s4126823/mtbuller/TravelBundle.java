@@ -23,7 +23,10 @@ public class TravelBundle {
 
     public void addAccommodationToBundle(Accommodation a) {
         this.accommodation = a;
+    }
 
+    public void addLiftPassToBundle(LiftPass l) {
+        this.liftPass = l;
     }
 
     public String toString() {
