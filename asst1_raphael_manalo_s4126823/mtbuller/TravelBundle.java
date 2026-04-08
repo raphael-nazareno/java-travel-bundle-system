@@ -23,4 +23,14 @@ public class TravelBundle {
         this.accommodation = a;
 
     }
+
+    public String toString() {
+        String customerName = customer.getCustomerName();
+        String accommodationText = (accommodation != null) ? accommodation.toString()
+                : "No Booking Found";
+
+        return String.format(
+                "Bundle ID: %d | Customer Name: %s | Accommodation: %s | Start Date: %s | Duration(Days): %d",
+                bundleID, customerName, accommodationText, startDate, durationDays);
+    }
 }
