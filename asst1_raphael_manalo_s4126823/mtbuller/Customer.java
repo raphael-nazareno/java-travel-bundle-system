@@ -6,12 +6,11 @@ public class Customer {
     static int nextID = 1;
 
     private String customerName;
-    private String customerDOB;
     private String customerGender;
     private int customerAge;
     private SkiingLevel SkiingLevel;
 
-    public Customer(int customerID, String customerName, int customerAge, String customerGender,
+    public Customer(int nextID, String customerName, int customerAge, String customerGender,
             SkiingLevel SkiingLevel) {
         customerID = nextID++;
         this.customerName = customerName;
