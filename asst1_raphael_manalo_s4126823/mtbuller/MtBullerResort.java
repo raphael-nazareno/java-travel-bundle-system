@@ -13,6 +13,7 @@ public class MtBullerResort {
         travelBundles = new ArrayList<>();
     }
 
+    // Customer Methods
     public void addCustomer(Customer c) {
         customers.add(c);
     }
@@ -21,6 +22,11 @@ public class MtBullerResort {
         for (Customer c : customers) {
             System.out.println(c);
         }
+    }
+
+    // Accommodation Methods
+    public void addAccommodation(Accommodation a) {
+        accommodations.add(a);
     }
 
 }
