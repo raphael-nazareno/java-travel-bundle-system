@@ -4,6 +4,8 @@ import java.util.ArrayList;
 
 public class MtBullerResort {
     private ArrayList<Customer> customers;
+    private ArrayList<Accommodation> accommodations;
+    private ArrayList<TravelBundle> travelBundles;
 
     public MtBullerResort() {
         customers = new ArrayList<>();
