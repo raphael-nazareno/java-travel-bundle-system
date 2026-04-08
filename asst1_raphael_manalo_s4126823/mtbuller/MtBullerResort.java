@@ -13,6 +13,7 @@ public class MtBullerResort {
         travelBundles = new ArrayList<>();
 
         populateAccommodations();
+        populateCustomers();
     }
 
     // Initial Arrays
@@ -44,6 +45,22 @@ public class MtBullerResort {
         addAccommodation(garden_village_single);
         addAccommodation(garden_village_double);
         addAccommodation(garden_village_family);
+    }
+
+    // Customers
+    public void populateCustomers() {
+        Customer alice = new Customer("Alice Piper", 23, "Female",
+                SkiingLevel.EXPERT);
+
+        Customer grace = new Customer("Grace Parker", 23, "Female",
+                SkiingLevel.INTERMEDIATE);
+
+        Customer mark = new Customer("Mark Howard", 35, "Male",
+                SkiingLevel.BEGINNER);
+
+        addCustomer(alice);
+        addCustomer(grace);
+        addCustomer(mark);
     }
 
     // Customer Methods
