@@ -12,7 +12,9 @@ public class MtBullerAdmin {
         Customer grace = new Customer(00002, "Grace Parker", 23, "Female",
                 SkiingLevel.INTERMEDIATE);
 
-        System.out.println(alice);
-        System.out.println(grace);
+        resort.addCustomer(alice);
+        resort.addCustomer(grace);
+
+        resort.listCustomers();
     }
 }
