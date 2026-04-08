@@ -174,4 +174,14 @@ public class MtBullerResort {
             System.out.println(b);
         }
     }
+
+    public TravelBundle findBundleById(int id) {
+        for (TravelBundle b : travelBundles) {
+            if (b.getBundleID() == id) {
+                return b;
+            }
+        }
+        return null;
+    }
+
 }
