@@ -1,6 +1,9 @@
+package mtbuller;
+
 public class Customer {
 
     private int customerID;
+    static int nextID = 1;
 
     private String customerName;
     private String customerDOB;
@@ -8,15 +11,10 @@ public class Customer {
     private int customerAge;
     private SkiingLevel SkiingLevel;
 
-    public enum SkiingLevel {
-        BEGINNER, INTERMEDIATE, EXPERT
-    }
-
-    public Customer(int customerID, String customerName, String customerDOB, int customerAge, String customerGender,
+    public Customer(int customerID, String customerName, int customerAge, String customerGender,
             SkiingLevel SkiingLevel) {
-        this.customerID = customerID;
+        customerID = nextID++;
         this.customerName = customerName;
-        this.customerDOB = customerDOB;
         this.customerAge = customerAge;
         this.customerGender = customerGender;
         this.SkiingLevel = SkiingLevel;
