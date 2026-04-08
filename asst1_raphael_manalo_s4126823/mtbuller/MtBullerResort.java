@@ -76,9 +76,12 @@ public class MtBullerResort {
     }
 
     public Accommodation findAccommodationById(int id) {
-        for (Accommodation a : accommodations)
-            if (id == accommodation.getID) {
+        for (Accommodation a : accommodations) {
+            if (a.getID() == id) {
+                return a;
             }
+        }
+        return null;
     }
 
 }
