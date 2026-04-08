@@ -6,4 +6,8 @@ public class HotelRoom extends Accommodation {
         super(id, pricePerNight);
     }
 
+    @Override
+    public String toString() {
+        return "Hotel Room | " + super.toString();
+    }
 }
