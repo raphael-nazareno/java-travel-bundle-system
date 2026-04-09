@@ -1,6 +1,10 @@
 package mtbuller;
 
-public class LiftPass {
+import java.io.Serializable;
+
+public class LiftPass implements Serializable {
+    private static final long serialVersionUID = 1L;
+
     private int numberOfDays;
 
     public LiftPass(int numberOfDays) {
