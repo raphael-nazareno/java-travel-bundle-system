@@ -18,8 +18,7 @@ public class MtBullerResort {
         populateCustomers();
     }
 
-    // Initial Arrays
-    // Accommodations
+    // Preset Accommodations
     public void populateAccommodations() {
 
         Accommodation windsor_classic = new HotelRoom(101, 150);
@@ -49,7 +48,7 @@ public class MtBullerResort {
         addAccommodation(garden_village_family);
     }
 
-    // Customers
+    // Preset Customers
     public void populateCustomers() {
         Customer alice = new Customer("Alice Piper", 23, "Female",
                 SkiingLevel.EXPERT);
