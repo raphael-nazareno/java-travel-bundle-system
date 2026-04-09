@@ -1,8 +1,13 @@
 package mtbuller;
 
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.nio.file.Files;
+import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -218,6 +223,20 @@ public class MtBullerResort {
             System.out.println("Bundles saved successfully.");
         } catch (IOException e) {
             System.out.println("ERROR! Couldn't save bundle!");
+        }
+    }
+
+    public void readBundlesFromFile() {
+        try {
+            ObjectInputStream in = new ObjectInputStream(new FileInputStream("bundles.dat"));
+
+            travelBundles = (ArrayList<TravelBundle>) in.readObject();
+
+            in.close();
+
+            System.out.println("Bundles loaded successfully.");
+        } catch (Exception e) {
+            System.out.println("ERROR! Couldn't load bundles.");
         }
     }
 
