@@ -2,7 +2,7 @@ package mtbuller;
 
 import java.io.Serializable;
 
-public class Lesson implements Serializable {
+public class Lesson implements Serializable, Pricable {
     private static final long serialVersionUID = 1L;
 
     private SkiingLevel level;

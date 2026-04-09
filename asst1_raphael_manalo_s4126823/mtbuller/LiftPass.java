@@ -2,7 +2,7 @@ package mtbuller;
 
 import java.io.Serializable;
 
-public class LiftPass implements Serializable {
+public class LiftPass implements Serializable, Pricable {
     private static final long serialVersionUID = 1L;
 
     private int numberOfDays;
