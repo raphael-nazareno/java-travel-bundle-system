@@ -46,11 +46,11 @@ public class TravelBundle {
         String liftPassText = (liftPass != null) ? String.format("$%.2f", liftPass.calculatePrice())
                 : "N/A";
 
-        String lessonTest = (lesson != null) ? String.format("$%.2f", liftPass.calculatePrice())
+        String lessonText = (lesson != null) ? String.format("$%.2f", lesson.calculatePrice())
                 : "No Lesson";
 
         return String.format(
                 "Bundle ID: %d | Customer Name: %s | Accommodation: %s | Start Date: %s | Duration(Days): %d | Lift Pass: %s | Lessons: %s",
-                bundleID, customerName, accommodationText, startDate, durationDays, liftPassText, lessonTest);
+                bundleID, customerName, accommodationText, startDate, durationDays, liftPassText, lessonText);
     }
 }
