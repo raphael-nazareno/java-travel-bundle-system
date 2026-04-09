@@ -1,6 +1,10 @@
 package mtbuller;
 
-public class TravelBundle {
+import java.io.Serializable;
+
+public class TravelBundle implements Serializable {
+    private static final long serialVersionUID = 1L;
+
     private int bundleID;
     private static int nextID = 1;
 
