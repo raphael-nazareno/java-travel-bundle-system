@@ -22,6 +22,10 @@ public class TravelBundle {
 
     }
 
+    public Customer getCustomer() {
+        return this.customer;
+    }
+
     public void addAccommodationToBundle(Accommodation a) {
         this.accommodation = a;
     }

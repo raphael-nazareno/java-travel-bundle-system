@@ -216,6 +216,14 @@ public class MtBullerResort {
             System.out.println("Bundle not found!");
             return;
         }
+
+        SkiingLevel level = travelBundle.getCustomer().getSkiingLevel();
+
+        Lesson lesson = new Lesson(level);
+
+        travelBundle.addLessonToBundle(lesson);
+        System.out.println("Lesson added successfully.");
+
     }
 
 }
