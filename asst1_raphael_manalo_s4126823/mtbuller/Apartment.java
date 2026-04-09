@@ -7,6 +7,6 @@ public class Apartment extends Accommodation {
 
     @Override
     public String toString() {
-        return "Apartment | " + super.toString();
+        return "Apartment  | " + super.toString();
     }
 }

@@ -24,7 +24,7 @@ public class MtBullerResort {
         Accommodation windsor_classic = new HotelRoom(101, 150);
         Accommodation windsor_deluxe = new HotelRoom(102, 300);
         Accommodation windsor_suite = new HotelRoom(103, 500);
-        Accommodation windsor_grand_suite = new HotelRoom(104, 1000);
+        Accommodation windsor_grand_suite = new HotelRoom(104, 900);
 
         Accommodation metropolitan_studio = new Apartment(201, 200);
         Accommodation metropolitan_single = new Apartment(202, 275);
