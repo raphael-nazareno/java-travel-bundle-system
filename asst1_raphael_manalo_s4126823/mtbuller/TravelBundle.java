@@ -11,6 +11,7 @@ public class TravelBundle {
     private Accommodation accommodation;
 
     private LiftPass liftPass;
+    private Lesson lesson;
 
     public TravelBundle(Customer customer, String startDate, int durationDays) {
         this.bundleID = nextID++;
@@ -27,6 +28,10 @@ public class TravelBundle {
 
     public void addLiftPassToBundle(LiftPass l) {
         this.liftPass = l;
+    }
+
+    public void addLessonToBundle(Lesson lesson) {
+        this.lesson = lesson;
     }
 
     public int getBundleID() {
