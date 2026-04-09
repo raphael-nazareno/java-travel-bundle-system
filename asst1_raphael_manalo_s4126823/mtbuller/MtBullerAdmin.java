@@ -38,30 +38,32 @@ public class MtBullerAdmin {
 
             switch (choice) {
                 case 1:
-
+                    resort.listAllAccommodations();
                     break;
                 case 2:
-
+                    resort.listAvailableAccommodations();
                     break;
 
                 case 3:
 
                     break;
                 case 4:
-
+                    resort.listCustomers();
                     break;
 
                 case 5:
-
+                    resort.createBundle();
                     break;
                 case 6:
-
+                    resort.listBundles();
                     break;
 
                 case 7:
+                    resort.addLiftPassToBundle();
 
                     break;
                 case 8:
+                    resort.addLessonToBundle();
 
                     break;
                 case 9:
