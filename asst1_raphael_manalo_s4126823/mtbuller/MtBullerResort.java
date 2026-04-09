@@ -1,5 +1,8 @@
 package mtbuller;
 
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -205,6 +208,17 @@ public class MtBullerResort {
             }
         }
         return null;
+    }
+
+    public void saveBundlesToFile() {
+        try {
+            ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("bundles.dat"));
+            out.writeObject(travelBundles);
+            out.close();
+            System.out.println("Bundles saved successfully.");
+        } catch (IOException e) {
+            System.out.println("ERROR! Couldn't save bundle!");
+        }
     }
 
     // Lift Pass Methods
