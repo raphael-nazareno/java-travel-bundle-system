@@ -204,4 +204,18 @@ public class MtBullerResort {
         travelBundle.addLiftPassToBundle(liftPass);
         System.out.println("Lift pass added successfully.");
     }
+
+    public void addLessonToBundle() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter Bundle ID: ");
+        int bundleID = scanner.nextInt();
+
+        TravelBundle travelBundle = findBundleById(bundleID);
+        if (travelBundle == null) {
+            System.out.println("Bundle not found!");
+            return;
+        }
+    }
+
 }
