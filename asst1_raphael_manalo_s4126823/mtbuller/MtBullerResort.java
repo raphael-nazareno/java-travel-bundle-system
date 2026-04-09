@@ -69,6 +69,30 @@ public class MtBullerResort {
         customers.add(c);
     }
 
+    public void createCustomer() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter your name: ");
+        String customerName = scanner.nextLine();
+
+        System.out.println("Enter your age: ");
+        int customerAge = scanner.nextInt();
+        scanner.nextLine();
+
+        System.out.println("Enter your gender: ");
+        String customerGender = scanner.nextLine();
+
+        System.out.println("Enter your Skiing Experience (Beginner, Intermediate or Expert): ");
+        String levelInput = scanner.nextLine();
+        SkiingLevel level = SkiingLevel.valueOf(levelInput.toUpperCase());
+
+        Customer customer = new Customer(customerName, customerAge, customerGender, level);
+
+        addCustomer(customer);
+        System.out.println("Customer information succesfully added!");
+
+    }
+
     public void listCustomers() {
         for (Customer c : customers) {
             System.out.println(c);
