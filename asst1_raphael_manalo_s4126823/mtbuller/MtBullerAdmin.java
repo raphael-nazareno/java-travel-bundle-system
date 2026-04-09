@@ -43,28 +43,23 @@ public class MtBullerAdmin {
                 case 2:
                     resort.listAvailableAccommodations();
                     break;
-
                 case 3:
-
+                    resort.createCustomer();
                     break;
                 case 4:
                     resort.listCustomers();
                     break;
-
                 case 5:
                     resort.createBundle();
                     break;
                 case 6:
                     resort.listBundles();
                     break;
-
                 case 7:
                     resort.addLiftPassToBundle();
-
                     break;
                 case 8:
                     resort.addLessonToBundle();
-
                     break;
                 case 9:
 
@@ -73,7 +68,6 @@ public class MtBullerAdmin {
 
                     break;
                 case 11:
-
                     System.exit(0);
                 default:
                     System.out.println("Invalid option. Please try again.");
