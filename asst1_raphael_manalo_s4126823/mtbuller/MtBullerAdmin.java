@@ -62,13 +62,15 @@ public class MtBullerAdmin {
                     resort.addLessonToBundle();
                     break;
                 case 9:
-
+                    resort.saveBundlesToFile();
                     break;
                 case 10:
-
+                    resort.readBundlesFromFile();
                     break;
                 case 11:
+                    System.out.println("Exiting program...");
                     System.exit(0);
+                    break;
                 default:
                     System.out.println("Invalid option. Please try again.");
                     break;
