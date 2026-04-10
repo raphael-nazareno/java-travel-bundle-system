@@ -83,13 +83,23 @@ public class MtBullerResort {
         System.out.println("Enter your age: ");
         int customerAge = scanner.nextInt();
         scanner.nextLine();
+        if (customerAge <= 0) {
+            System.out.println("Invalid age. Age must be greater than 0.");
+            return;
+        }
 
         System.out.println("Enter your gender: ");
         String customerGender = scanner.nextLine();
 
         System.out.println("Enter your Skiing Experience (Beginner, Intermediate or Expert): ");
         String levelInput = scanner.nextLine();
-        SkiingLevel level = SkiingLevel.valueOf(levelInput.toUpperCase());
+        SkiingLevel level;
+        try {
+            level = SkiingLevel.valueOf(levelInput.toUpperCase());
+        } catch (IllegalArgumentException e) {
+            System.out.println("Invalid level. Please enter BEGINNER, INTERMEDIATE, or EXPERT.");
+            return;
+        }
 
         Customer customer = new Customer(customerName, customerAge, customerGender, level);
 
@@ -159,18 +169,23 @@ public class MtBullerResort {
             return;
         }
 
-        System.out.println("Enter your arrival date: ");
+        System.out.println("Enter your arrival date (YYYY-MM-DD): ");
         String startDate = scanner.nextLine();
 
         System.out.println("Enter stay duration in days: ");
         int durationDays = scanner.nextInt();
+
+        if (durationDays <= 0) {
+            System.out.println("Invalid duration. Duration must be greater than 0.");
+            return;
+        }
 
         // New Bundle Object
         TravelBundle bundle = new TravelBundle(customer, startDate, durationDays);
 
         // User Input For Accommodation
         listAvailableAccommodations();
-        System.out.println("Enter Accommodation ID: ");
+        System.out.println("Enter Accommodation ID from the list above: ");
         int accommodationID = scanner.nextInt();
 
         Accommodation accommodation = findAccommodationById(accommodationID);
