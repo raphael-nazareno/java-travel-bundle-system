@@ -306,8 +306,8 @@ public class MtBullerResort {
 
             System.out.println("Bundles loaded successfully.");
             listBundles();
-        } catch (Exception e) {
-            System.out.println("ERROR! Couldn't load bundles.");
+        } catch (IOException | ClassNotFoundException e) {
+            System.out.println("ERROR! Couldn't load bundles: " + e.getMessage());
         }
     }
 
