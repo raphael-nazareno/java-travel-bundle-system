@@ -129,12 +129,18 @@ public class MtBullerResort {
     }
 
     public void listAllAccommodations() {
+        System.out.println("\nType         | Name                      | ID   | Price      | Availability");
+        System.out.println("-------------------------------------------------------------------------------");
+
         for (Accommodation a : accommodations) {
             System.out.println(a);
         }
     }
 
     public void listAvailableAccommodations() {
+        System.out.println("\nType         | Name                      | ID   | Price      | Availability");
+        System.out.println("-------------------------------------------------------------------------------");
+
         for (Accommodation a : accommodations)
             if (a.isAvailable()) {
                 System.out.println(a);
