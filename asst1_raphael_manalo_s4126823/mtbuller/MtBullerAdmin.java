@@ -37,6 +37,8 @@ public class MtBullerAdmin {
             System.out.print("Select an option: ");
             int choice = scanner.nextInt();
 
+            System.out.println(); // Spacing
+
             switch (choice) {
                 case 1:
                     resort.listAllAccommodations();
