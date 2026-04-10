@@ -319,7 +319,20 @@ public class MtBullerResort {
         }
 
         System.out.println("Enter Lift Pass length in days: ");
-        int numberOfDays = scanner.nextInt();
+        String daysInput = scanner.nextLine();
+        int numberOfDays;
+
+        try {
+            numberOfDays = Integer.parseInt(daysInput);
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid lift pass length. Please enter a whole number.");
+            return;
+        }
+
+        if (numberOfDays <= 0) {
+            System.out.println("Invalid lift pass length. Days must be greater than 0.");
+            return;
+        }
 
         LiftPass liftPass = new LiftPass(numberOfDays);
 
