@@ -4,3 +4,16 @@
 This project is a Java console application developed for a university assignment. It simulates a booking system for Mt Buller Ski Resort, allowing customers to create customised travel bundles that can include accommodation, lift passes, and ski lessons.
 
 The application was designed using object-oriented programming principles and includes features such as inheritance, abstraction, interfaces, exception handling, and file persistence.
+
+## Features
+
+- Display all accommodations
+- Display available accommodations
+- Add new customers
+- List all customers
+- Create a travel bundle for a customer
+- Add a lift pass to a bundle
+- Add ski lessons to a bundle
+- Save bundles to a file (binary format)
+- Load bundles from a file
+
