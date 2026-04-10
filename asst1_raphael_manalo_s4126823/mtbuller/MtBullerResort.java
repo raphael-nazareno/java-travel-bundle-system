@@ -163,8 +163,6 @@ public class MtBullerResort {
 
     public void createBundle() {
         // User Input for Bundle
-        Scanner scanner = new Scanner(System.in);
-
         System.out.println("Enter your customer ID: ");
         int customerID = scanner.nextInt();
         scanner.nextLine();
