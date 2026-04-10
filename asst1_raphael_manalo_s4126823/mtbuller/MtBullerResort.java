@@ -214,7 +214,15 @@ public class MtBullerResort {
         listAvailableAccommodations();
         System.out.println();
         System.out.println("Enter Accommodation ID from the list above: ");
-        int accommodationID = scanner.nextInt();
+        String accommodationIdInput = scanner.nextLine();
+        int accommodationID;
+
+        try {
+            accommodationID = Integer.parseInt(accommodationIdInput);
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid accommodation ID. Please enter a whole number.");
+            return;
+        }
 
         Accommodation accommodation = findAccommodationById(accommodationID);
 
