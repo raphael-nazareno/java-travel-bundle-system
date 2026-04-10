@@ -22,4 +22,12 @@ public class Lesson implements Serializable, Pricable {
         }
         return 15 * numberOfLessons;
     }
+
+    public int getNumberOfLessons() {
+        return this.numberOfLessons;
+    }
+
+    public SkiingLevel getLevel() {
+        return this.level;
+    }
 }

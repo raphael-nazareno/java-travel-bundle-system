@@ -21,4 +21,8 @@ public class LiftPass implements Serializable, Pricable {
             return 26 * numberOfDays;
         }
     }
+
+    public int getNumberOfDays() {
+        return this.numberOfDays;
+    }
 }

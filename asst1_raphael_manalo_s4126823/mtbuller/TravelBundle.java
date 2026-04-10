@@ -53,10 +53,18 @@ public class TravelBundle implements Serializable {
         String accommodationText = (accommodation != null) ? accommodation.getName()
                 : "No Booking Found";
 
-        String liftPassText = (liftPass != null) ? String.format("$%.2f", liftPass.calculatePrice())
+        String liftPassText = (liftPass != null)
+                ? String.format("$%.2f - %d day pass",
+                        liftPass.calculatePrice(),
+                        liftPass.getNumberOfDays())
                 : "N/A";
 
-        String lessonText = (lesson != null) ? String.format("$%.2f", lesson.calculatePrice())
+        String lessonText = (lesson != null)
+                ? String.format("$%.2f - %d %s lesson%s",
+                        lesson.calculatePrice(),
+                        lesson.getNumberOfLessons(),
+                        lesson.getLevel().toString().toLowerCase(),
+                        lesson.getNumberOfLessons() > 1 ? "s" : "")
                 : "No Lesson";
 
         return String.format(
