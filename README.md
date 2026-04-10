@@ -17,3 +17,36 @@ The application was designed using object-oriented programming principles and in
 - Save bundles to a file (binary format)
 - Load bundles from a file
 
+## System Design
+
+### Main Classes
+
+- **Accommodation (Abstract Class)**  
+  Base class for all accommodation types.  
+  Subclasses include:
+  - HotelRoom
+  - Apartment
+  - LodgeRoom  
+
+- **Customer**  
+  Stores customer details including name, age, gender, and skiing level.
+
+- **TravelBundle**  
+  Represents a booking made by a customer.  
+  Includes accommodation and optional additions such as lift passes and lessons.
+
+- **LiftPass**  
+  Handles lift pass pricing based on duration.
+
+- **Lesson**  
+  Calculates lesson pricing based on skiing level and number of lessons.
+
+- **MtBullerResort**  
+  Acts as the system manager and stores all customers, accommodations, and bundles using ArrayLists.
+
+- **MtBullerAdmin**  
+  Contains the main method and provides the menu-driven user interface.
+
+
+  
+
