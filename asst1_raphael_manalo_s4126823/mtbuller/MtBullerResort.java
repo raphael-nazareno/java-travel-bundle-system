@@ -191,6 +191,7 @@ public class MtBullerResort {
 
         // User Input For Accommodation
         listAvailableAccommodations();
+        System.out.println();
         System.out.println("Enter Accommodation ID from the list above: ");
         int accommodationID = scanner.nextInt();
 
