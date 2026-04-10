@@ -294,7 +294,14 @@ public class MtBullerResort {
 
         SkiingLevel level = travelBundle.getCustomer().getSkiingLevel();
 
-        Lesson lesson = new Lesson(level);
+        System.out.println("Enter number of lessons: ");
+        int numLessons = scanner.nextInt();
+        if (numLessons <= 0) {
+            System.out.println("Invalid number of lessons.");
+            return;
+        }
+
+        Lesson lesson = new Lesson(level, numLessons);
 
         travelBundle.addLessonToBundle(lesson);
         System.out.println("Lesson added successfully.");

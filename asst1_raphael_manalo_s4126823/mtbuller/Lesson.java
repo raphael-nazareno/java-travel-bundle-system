@@ -6,18 +6,20 @@ public class Lesson implements Serializable, Pricable {
     private static final long serialVersionUID = 1L;
 
     private SkiingLevel level;
+    private int numberOfLessons;
 
-    public Lesson(SkiingLevel level) {
+    public Lesson(SkiingLevel level, int numberOfLessons) {
         this.level = level;
+        this.numberOfLessons = numberOfLessons;
     }
 
     public double calculatePrice() {
         if (level == SkiingLevel.BEGINNER) {
-            return 25;
+            return 25 * numberOfLessons;
         }
         if (level == SkiingLevel.INTERMEDIATE) {
-            return 20;
+            return 20 * numberOfLessons;
         }
-        return 15;
+        return 15 * numberOfLessons;
     }
 }
