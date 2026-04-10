@@ -2,7 +2,7 @@ package mtbuller;
 
 import java.io.Serializable;
 
-public abstract class Accommodation implements Serializable {
+public abstract class Accommodation implements Serializable, Pricable {
     private static final long serialVersionUID = 1L;
 
     private int id;
@@ -23,6 +23,11 @@ public abstract class Accommodation implements Serializable {
     }
 
     public double getPricePerNight() {
+        return this.pricePerNight;
+    }
+
+    @Override
+    public double calculatePrice() {
         return this.pricePerNight;
     }
 
