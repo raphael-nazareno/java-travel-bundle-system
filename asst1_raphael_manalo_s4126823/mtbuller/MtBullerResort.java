@@ -5,8 +5,12 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+
 import java.util.ArrayList;
 import java.util.Scanner;
+
+import java.time.LocalDate;
+import java.time.format.DateTimeParseException;
 
 public class MtBullerResort {
     private ArrayList<Customer> customers;
@@ -190,6 +194,13 @@ public class MtBullerResort {
 
         System.out.println("Enter your arrival date (YYYY-MM-DD): ");
         String startDate = scanner.nextLine();
+
+        try {
+            LocalDate.parse(startDate);
+        } catch (DateTimeParseException e) {
+            System.out.println("Invalid date. Please enter the date in YYYY-MM-DD format.");
+            return;
+        }
 
         System.out.println("Enter stay duration in days: ");
         String durationInput = scanner.nextLine();
