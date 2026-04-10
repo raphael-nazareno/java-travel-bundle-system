@@ -77,8 +77,6 @@ public class MtBullerResort {
     }
 
     public void createCustomer() {
-        Scanner scanner = new Scanner(System.in);
-
         System.out.println("Enter your name: ");
         String customerName = scanner.nextLine();
 
