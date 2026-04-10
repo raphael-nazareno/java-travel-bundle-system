@@ -269,8 +269,6 @@ public class MtBullerResort {
 
     // Lift Pass Methods
     public void addLiftPassToBundle() {
-        Scanner scanner = new Scanner(System.in);
-
         System.out.println("Enter Bundle ID: ");
         int bundleID = scanner.nextInt();
 
@@ -290,8 +288,6 @@ public class MtBullerResort {
     }
 
     public void addLessonToBundle() {
-        Scanner scanner = new Scanner(System.in);
-
         System.out.println("Enter Bundle ID: ");
         int bundleID = scanner.nextInt();
 
