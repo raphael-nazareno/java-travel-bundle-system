@@ -89,9 +89,11 @@ public class TravelBundle implements Serializable {
                         lesson.getNumberOfLessons() > 1 ? "s" : "")
                 : "No Lesson";
 
+        String totalPriceText = String.format("$%.2f", calculateTotalPrice());
+
         return String.format(
-                "Bundle ID: %d | Customer Name: %s | Customer ID: %s | Accommodation: %s | Start Date: %s | Duration(Days): %d | Lift Pass: %s | Lessons: %s",
+                "Bundle ID: %d | Customer Name: %s | Customer ID: %s | Accommodation: %s | Start Date: %s | Duration(Days): %d | Lift Pass: %s | Lessons: %s | Total Price: %s",
                 bundleID, customerName, customerID, accommodationText, startDate, durationDays, liftPassText,
-                lessonText);
+                lessonText, totalPriceText);
     }
 }
