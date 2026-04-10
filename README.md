@@ -84,6 +84,19 @@ The application was designed using object-oriented programming principles and in
 - The file used is `bundles.dat`
 - All relevant classes implement `Serializable` to support object persistence
 
+## Input Validation & Error Handling
+
+- User prompts clearly indicate expected input formats
+- Invalid IDs (customer, accommodation, bundle) are handled gracefully
+- Validation is applied to ensure:
+  - Age is greater than 0
+  - Duration is greater than 0
+  - Lesson count is valid
+- Try-catch blocks are used for:
+  - File operations (saving and loading data)
+  - Handling invalid enum input (skiing level)
+- A custom exception is implemented to handle unavailable accommodation during booking
+
 
 
 
