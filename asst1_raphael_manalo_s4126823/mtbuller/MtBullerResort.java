@@ -12,8 +12,10 @@ public class MtBullerResort {
     private ArrayList<Customer> customers;
     private ArrayList<Accommodation> accommodations;
     private ArrayList<TravelBundle> travelBundles;
+    private final Scanner scanner;
 
-    public MtBullerResort() {
+    public MtBullerResort(Scanner scanner) {
+        this.scanner = scanner;
         // Array Creation
         customers = new ArrayList<>();
         accommodations = new ArrayList<>();

@@ -5,9 +5,8 @@ import java.util.Scanner;
 public class MtBullerAdmin {
 
     public static void main(String[] args) {
-        MtBullerResort resort = new MtBullerResort();
-
         Scanner scanner = new Scanner(System.in);
+        MtBullerResort resort = new MtBullerResort(scanner);
 
         while (true) {
             System.out.println("\n===== Mt Buller Resort Menu =====");
