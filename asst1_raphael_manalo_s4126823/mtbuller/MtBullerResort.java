@@ -174,12 +174,17 @@ public class MtBullerResort {
         int accommodationID = scanner.nextInt();
 
         Accommodation accommodation = findAccommodationById(accommodationID);
+
         if (accommodation == null) {
             System.out.println("Accommodation not found!");
             return;
         }
-        if (!accommodation.isAvailable()) {
-            System.out.println("Accommodation is not available");
+        try {
+            if (!accommodation.isAvailable()) {
+                throw new AccommodationNotAvailableException("Accommodation is not available!");
+            }
+        } catch (AccommodationNotAvailableException e) {
+            System.out.println(e.getMessage());
             return;
         }
 
