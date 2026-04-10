@@ -64,7 +64,18 @@ The application was designed using object-oriented programming principles and in
 - **Enum**  
   `SkiingLevel` is used to represent customer skill levels (Beginner, Intermediate, Expert).
 
+## Pricing Logic
 
+### Lift Pass
+- $26 per day
+- 10% discount applied for bookings of 5 days or more
+- $200 flat rate for a 30-day (season) pass
+
+### Lessons
+- Beginner: $25 per lesson
+- Intermediate: $20 per lesson
+- Expert: $15 per lesson
+- Total lesson cost is calculated based on the number of lessons selected
 
 
 
