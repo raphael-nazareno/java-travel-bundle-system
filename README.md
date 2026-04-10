@@ -113,6 +113,10 @@ java mtbuller.MtBullerAdmin
 - Lift pass duration determines pricing, including discounts and season pass
 - Lesson cost is based on customer skiing level and number of lessons
 
+## AI Acknowledgement
+
+This project was developed with assistance from AI tools (ChatGPT) for guidance, debugging, and concept clarification. All code has been reviewed, understood, and adapted by the author.
+
 
 
 
