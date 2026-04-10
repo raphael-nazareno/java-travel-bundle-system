@@ -81,8 +81,16 @@ public class MtBullerResort {
         String customerName = scanner.nextLine();
 
         System.out.println("Enter your age: ");
-        int customerAge = scanner.nextInt();
-        scanner.nextLine();
+        String ageInput = scanner.nextLine();
+        int customerAge;
+
+        try {
+            customerAge = Integer.parseInt(ageInput);
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid age. Please enter a whole number.");
+            return;
+        }
+
         if (customerAge <= 0) {
             System.out.println("Invalid age. Age must be greater than 0.");
             return;
