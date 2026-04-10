@@ -26,7 +26,7 @@ public class MtBullerResort {
     // Preset Accommodations
     public void populateAccommodations() {
 
-        Accommodation windsor_classic = new HotelRoom(101, 150, "Window Classic");
+        Accommodation windsor_classic = new HotelRoom(101, 150, "Windsor Classic");
         Accommodation windsor_deluxe = new HotelRoom(102, 300, "Windsor Deluxe");
         Accommodation windsor_suite = new HotelRoom(103, 500, "Windsor Suite");
         Accommodation windsor_grand_suite = new HotelRoom(104, 900, "Windsor Grand Suite");
@@ -129,8 +129,8 @@ public class MtBullerResort {
     }
 
     public void listAllAccommodations() {
-        System.out.println("\nType         | Name                      | ID   | Price      | Availability");
-        System.out.println("-------------------------------------------------------------------------------");
+        System.out.println("\nType | Name | ID | Price | Availability");
+        System.out.println("--------------------------------------------------");
 
         for (Accommodation a : accommodations) {
             System.out.println(a);
@@ -138,8 +138,8 @@ public class MtBullerResort {
     }
 
     public void listAvailableAccommodations() {
-        System.out.println("\nType         | Name                      | ID   | Price      | Availability");
-        System.out.println("-------------------------------------------------------------------------------");
+        System.out.println("\nType | Name | ID | Price | Availability");
+        System.out.println("--------------------------------------------------");
 
         for (Accommodation a : accommodations)
             if (a.isAvailable()) {
