@@ -192,7 +192,15 @@ public class MtBullerResort {
         String startDate = scanner.nextLine();
 
         System.out.println("Enter stay duration in days: ");
-        int durationDays = scanner.nextInt();
+        String durationInput = scanner.nextLine();
+        int durationDays;
+
+        try {
+            durationDays = Integer.parseInt(durationInput);
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid duration. Please enter a whole number.");
+            return;
+        }
 
         if (durationDays <= 0) {
             System.out.println("Invalid duration. Duration must be greater than 0.");
