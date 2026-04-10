@@ -262,6 +262,7 @@ public class MtBullerResort {
             in.close();
 
             System.out.println("Bundles loaded successfully.");
+            listBundles();
         } catch (Exception e) {
             System.out.println("ERROR! Couldn't load bundles.");
         }
