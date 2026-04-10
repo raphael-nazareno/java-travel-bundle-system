@@ -117,6 +117,10 @@ java mtbuller.MtBullerAdmin
 
 This project was developed with assistance from AI tools (ChatGPT) for guidance, debugging, and concept clarification. All code has been reviewed, understood, and adapted by the author.
 
+## Author
+
+Raphael Manalo
+
 
 
 
