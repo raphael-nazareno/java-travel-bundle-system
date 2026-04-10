@@ -224,6 +224,10 @@ public class MtBullerResort {
             System.out.println("No bundles found!");
             return;
         }
+
+        System.out.println("\nBundle ID | Customer | Accommodation | Start | Days | Lift Pass | Lesson");
+        System.out.println("-------------------------------------------------------------------------------");
+
         for (TravelBundle b : travelBundles) {
             System.out.println(b);
         }

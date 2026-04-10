@@ -48,7 +48,9 @@ public class TravelBundle implements Serializable {
 
     public String toString() {
         String customerName = customer.getCustomerName();
-        String accommodationText = (accommodation != null) ? accommodation.toString()
+        int customerID = customer.getCustomerID();
+
+        String accommodationText = (accommodation != null) ? accommodation.getName()
                 : "No Booking Found";
 
         String liftPassText = (liftPass != null) ? String.format("$%.2f", liftPass.calculatePrice())
@@ -58,7 +60,8 @@ public class TravelBundle implements Serializable {
                 : "No Lesson";
 
         return String.format(
-                "Bundle ID: %d | Customer Name: %s | Accommodation: %s | Start Date: %s | Duration(Days): %d | Lift Pass: %s | Lessons: %s",
-                bundleID, customerName, accommodationText, startDate, durationDays, liftPassText, lessonText);
+                "Bundle ID: %d | Customer Name: %s | Customer ID: %s | Accommodation: %s | Start Date: %s | Duration(Days): %d | Lift Pass: %s | Lessons: %s",
+                bundleID, customerName, customerID, accommodationText, startDate, durationDays, liftPassText,
+                lessonText);
     }
 }
