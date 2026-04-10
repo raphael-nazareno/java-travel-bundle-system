@@ -35,7 +35,15 @@ public class MtBullerAdmin {
             System.out.println("11. Quit");
 
             System.out.print("Select an option: ");
-            int choice = scanner.nextInt();
+            String input = scanner.nextLine();
+            int choice;
+
+            try {
+                choice = Integer.parseInt(input);
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid input. Please enter a number from 1 to 11.");
+                continue;
+            }
 
             System.out.println(); // Spacing
 
