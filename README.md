@@ -97,7 +97,6 @@ The application was designed using object-oriented programming principles and in
   - Handling invalid enum input (skiing level)
 - A custom exception is implemented to handle unavailable accommodation during booking
 
-
 ## How to Run
 
 1. Compile the project:
@@ -105,6 +104,14 @@ javac mtbuller/*.java
 
 2. Run the application:
 java mtbuller.MtBullerAdmin
+
+## Notes
+
+- A bundle must include accommodation
+- Lift passes and lessons are optional additions
+- Each accommodation can only be booked once (becomes unavailable after booking)
+- Lift pass duration determines pricing, including discounts and season pass
+- Lesson cost is based on customer skiing level and number of lessons
 
 
 
