@@ -10,7 +10,6 @@ public class MtBullerAdmin {
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
-            System.out.println(); // Spacing
             System.out.println("\n===== Mt Buller Resort Menu =====");
 
             System.out.println("1. List all accommodations");
