@@ -1,8 +1,8 @@
 package mtbuller;
 
 public class Apartment extends Accommodation {
-    public Apartment(int id, double pricePerNight) {
-        super(id, pricePerNight);
+    public Apartment(int id, double pricePerNight, String name) {
+        super(id, pricePerNight, name);
     }
 
     @Override

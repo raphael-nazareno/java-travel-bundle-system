@@ -9,10 +9,13 @@ public abstract class Accommodation implements Serializable {
     private double pricePerNight;
     private boolean available;
 
-    public Accommodation(int id, double pricePerNight) {
+    private String name;
+
+    public Accommodation(int id, double pricePerNight, String name) {
         this.id = id;
         this.pricePerNight = pricePerNight;
         this.available = true;
+        this.name = name;
     }
 
     public int getID() {
@@ -31,11 +34,15 @@ public abstract class Accommodation implements Serializable {
         return this.available;
     }
 
+    public String getName() {
+        return this.name;
+    }
+
     @Override
     public String toString() {
         String availabilityText = available ? "Yes" : "No";
 
-        return String.format("ID: %d | Price (per night): %.2f | Availability %s",
-                id, pricePerNight, availabilityText);
+        return String.format("%s | ID: %d | Price (per night): %.2f | Availability %s",
+                name, id, pricePerNight, availabilityText);
     }
 }

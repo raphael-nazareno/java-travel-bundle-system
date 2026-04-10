@@ -26,18 +26,18 @@ public class MtBullerResort {
     // Preset Accommodations
     public void populateAccommodations() {
 
-        Accommodation windsor_classic = new HotelRoom(101, 150);
-        Accommodation windsor_deluxe = new HotelRoom(102, 300);
-        Accommodation windsor_suite = new HotelRoom(103, 500);
-        Accommodation windsor_grand_suite = new HotelRoom(104, 900);
+        Accommodation windsor_classic = new HotelRoom(101, 150, "Window Classic");
+        Accommodation windsor_deluxe = new HotelRoom(102, 300, "Windsor Deluxe");
+        Accommodation windsor_suite = new HotelRoom(103, 500, "Windsor Suite");
+        Accommodation windsor_grand_suite = new HotelRoom(104, 900, "Windsor Grand Suite");
 
-        Accommodation metropolitan_studio = new Apartment(201, 200);
-        Accommodation metropolitan_single = new Apartment(202, 275);
-        Accommodation metropolitan_double = new Apartment(203, 325);
+        Accommodation metropolitan_studio = new Apartment(201, 200, "Metropolitan Studio");
+        Accommodation metropolitan_single = new Apartment(202, 275, "Metropolitan Single");
+        Accommodation metropolitan_double = new Apartment(203, 325, "Metropolitan Double");
 
-        Accommodation garden_village_single = new LodgeRoom(301, 350);
-        Accommodation garden_village_double = new LodgeRoom(302, 450);
-        Accommodation garden_village_family = new LodgeRoom(303, 600);
+        Accommodation garden_village_single = new LodgeRoom(301, 350, "Garden Village Single");
+        Accommodation garden_village_double = new LodgeRoom(302, 450, "Garden Village Double");
+        Accommodation garden_village_family = new LodgeRoom(303, 600, "Garden Village Family");
 
         addAccommodation(windsor_classic);
         addAccommodation(windsor_deluxe);
