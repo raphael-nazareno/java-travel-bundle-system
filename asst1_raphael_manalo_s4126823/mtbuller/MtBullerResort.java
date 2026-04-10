@@ -223,6 +223,7 @@ public class MtBullerResort {
         }
     }
 
+    @SuppressWarnings("unchecked")
     public void readBundlesFromFile() {
         try {
             ObjectInputStream in = new ObjectInputStream(new FileInputStream("bundles.dat"));
