@@ -302,7 +302,15 @@ public class MtBullerResort {
     // Lift Pass Methods
     public void addLiftPassToBundle() {
         System.out.println("Enter Bundle ID: ");
-        int bundleID = scanner.nextInt();
+        String bundleIdInput = scanner.nextLine();
+        int bundleID;
+
+        try {
+            bundleID = Integer.parseInt(bundleIdInput);
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid bundle ID. Please enter a whole number.");
+            return;
+        }
 
         TravelBundle travelBundle = findBundleById(bundleID);
         if (travelBundle == null) {
