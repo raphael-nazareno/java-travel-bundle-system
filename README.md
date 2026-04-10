@@ -77,6 +77,17 @@ The application was designed using object-oriented programming principles and in
 - Expert: $15 per lesson
 - Total lesson cost is calculated based on the number of lessons selected
 
+## Data Persistence
+
+- Travel bundles are saved to a binary file using `ObjectOutputStream`
+- Bundles are loaded from a binary file using `ObjectInputStream`
+- The file used is `bundles.dat`
+- All relevant classes implement `Serializable` to support object persistence
+
+
+
+
+
 
 
 
