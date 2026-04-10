@@ -47,6 +47,25 @@ The application was designed using object-oriented programming principles and in
 - **MtBullerAdmin**  
   Contains the main method and provides the menu-driven user interface.
 
+## Object-Oriented Concepts Used
 
-  
+- **Abstraction**  
+  The `Accommodation` class is implemented as an abstract class to represent shared properties of different accommodation types.
+
+- **Inheritance**  
+  `HotelRoom`, `Apartment`, and `LodgeRoom` extend the `Accommodation` class.
+
+- **Encapsulation**  
+  All class attributes are private and accessed through getters and setters.
+
+- **Interface**  
+  The `Pricable` interface is implemented by `LiftPass` and `Lesson` to define a common pricing method.
+
+- **Enum**  
+  `SkiingLevel` is used to represent customer skill levels (Beginner, Intermediate, Expert).
+
+
+
+
+
 
