@@ -361,7 +361,16 @@ public class MtBullerResort {
         SkiingLevel level = travelBundle.getCustomer().getSkiingLevel();
 
         System.out.println("Enter number of lessons: ");
-        int numLessons = scanner.nextInt();
+        String lessonsInput = scanner.nextLine();
+        int numLessons;
+
+        try {
+            numLessons = Integer.parseInt(lessonsInput);
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid number of lessons. Please enter a whole number.");
+            return;
+        }
+
         if (numLessons <= 0) {
             System.out.println("Invalid number of lessons.");
             return;
