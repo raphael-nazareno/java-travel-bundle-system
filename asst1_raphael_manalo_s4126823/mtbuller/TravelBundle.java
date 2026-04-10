@@ -34,14 +34,6 @@ public class TravelBundle implements Serializable {
         this.accommodation = a;
     }
 
-    private double calculateAccommodationCost() {
-        if (accommodation == null) {
-            return 0.0;
-        }
-
-        return accommodation.calculatePrice() * durationDays;
-    }
-
     public void addLiftPassToBundle(LiftPass l) {
         this.liftPass = l;
     }
@@ -52,6 +44,28 @@ public class TravelBundle implements Serializable {
 
     public int getBundleID() {
         return this.bundleID;
+    }
+
+    private double calculateAccommodationCost() {
+        if (accommodation == null) {
+            return 0.0;
+        }
+
+        return accommodation.calculatePrice() * durationDays;
+    }
+
+    private double calculateTotalPrice() {
+        double totalPrice = calculateAccommodationCost();
+
+        if (liftPass != null) {
+            totalPrice += liftPass.calculatePrice();
+        }
+
+        if (lesson != null) {
+            totalPrice += lesson.calculatePrice();
+        }
+
+        return totalPrice;
     }
 
     public String toString() {
