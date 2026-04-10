@@ -42,7 +42,7 @@ public abstract class Accommodation implements Serializable {
     public String toString() {
         String availabilityText = available ? "Yes" : "No";
 
-        return String.format("%s | ID: %d | Price (per night): %.2f | Availability %s",
+        return String.format("%s | ID: %d | Price: %.2f | Availability %s",
                 name, id, pricePerNight, availabilityText);
     }
 }
