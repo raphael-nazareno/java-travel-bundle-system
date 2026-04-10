@@ -98,6 +98,15 @@ The application was designed using object-oriented programming principles and in
 - A custom exception is implemented to handle unavailable accommodation during booking
 
 
+## How to Run
+
+1. Compile the project:
+javac mtbuller/*.java
+
+2. Run the application:
+java mtbuller.MtBullerAdmin
+
+
 
 
 
