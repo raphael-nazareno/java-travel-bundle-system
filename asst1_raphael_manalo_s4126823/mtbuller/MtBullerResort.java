@@ -172,8 +172,15 @@ public class MtBullerResort {
     public void createBundle() {
         // User Input for Bundle
         System.out.println("Enter your customer ID: ");
-        int customerID = scanner.nextInt();
-        scanner.nextLine();
+        String customerIdInput = scanner.nextLine();
+        int customerID;
+
+        try {
+            customerID = Integer.parseInt(customerIdInput);
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid customer ID. Please enter a whole number.");
+            return;
+        }
 
         Customer customer = findCustomerById(customerID);
         if (customer == null) {
