@@ -132,9 +132,12 @@ public class TravelBundle implements Serializable {
 
         String totalPriceText = String.format("$%.2f", calculateTotalPrice());
 
+        String endDateText = getEndDate().toString();
+
         return String.format(
-                "Bundle ID: %d | Customer Name: %s | Customer ID: %s | Accommodation: %s | Start Date: %s | Duration(Days): %d | Lift Pass: %s | Lessons: %s | Total Price: %s",
-                bundleID, customerName, customerID, accommodationText, startDate, durationDays, liftPassText,
+                "Bundle ID: %d | Customer Name: %s | Customer ID: %s | Accommodation: %s | Start Date: %s | End Date: %s |  Duration(Days): %d | Lift Pass: %s | Lessons: %s | Total Price: %s",
+                bundleID, customerName, customerID, accommodationText, startDate, endDateText, durationDays,
+                liftPassText,
                 lessonText, totalPriceText);
     }
 }

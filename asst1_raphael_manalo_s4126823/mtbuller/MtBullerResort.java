@@ -357,9 +357,10 @@ public class MtBullerResort {
             return;
         }
 
-        System.out.println("\nBundle ID | Customer | Accommodation | Start | Days | Lift Pass | Lessons | Total Price");
         System.out.println(
-                "----------------------------------------------------------------------------------------------------");
+                "\nBundle ID | Customer | Accommodation | Start | End | Days | Lift Pass | Lessons | Total Price");
+        System.out.println(
+                "----------------------------------------------------------------------------------------------------------------");
 
         for (TravelBundle b : travelBundles) {
             System.out.println(b);
