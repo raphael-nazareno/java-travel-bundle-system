@@ -71,8 +71,13 @@ public class MtBullerResort {
                 SkiingLevel.BEGINNER);
 
         addCustomer(alice);
+        Customer.updateNextID(alice.getCustomerID());
+
         addCustomer(grace);
+        Customer.updateNextID(grace.getCustomerID());
+
         addCustomer(mark);
+        Customer.updateNextID(mark.getCustomerID());
     }
 
     // Customer Methods
