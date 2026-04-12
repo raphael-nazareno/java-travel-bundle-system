@@ -53,7 +53,7 @@ public class Customer implements Serializable {
     @Override
     public String toString() {
         return String.format(
-                "ID: %d | Name: %s | Age: %d | Gender: %s | Level: %s",
+                "%d | %s | %d | %s | %s",
                 customerID, customerName, customerAge, customerGender, skiingLevel);
     }
 }
