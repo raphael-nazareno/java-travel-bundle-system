@@ -126,6 +126,12 @@ public class MtBullerResort {
 
         System.out.println("Enter your Skiing Experience (Beginner, Intermediate or Expert): ");
         String levelInput = scanner.nextLine().trim();
+
+        if (levelInput.isEmpty()) {
+            System.out.println("Invalid level. Skiing level cannot be blank.");
+            return;
+        }
+
         SkiingLevel level;
         try {
             level = SkiingLevel.valueOf(levelInput.toUpperCase());
