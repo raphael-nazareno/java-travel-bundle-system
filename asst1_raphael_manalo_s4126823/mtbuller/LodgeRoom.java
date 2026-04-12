@@ -7,6 +7,11 @@ public class LodgeRoom extends Accommodation {
     }
 
     @Override
+    public AccommodationType getAccommodationType() {
+        return AccommodationType.LODGE_ROOM;
+    }
+
+    @Override
     public String toString() {
         return "Lodge Room | " + super.toString();
     }
