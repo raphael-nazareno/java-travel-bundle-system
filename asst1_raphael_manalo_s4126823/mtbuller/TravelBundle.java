@@ -94,9 +94,11 @@ public class TravelBundle implements Serializable {
                 : "No Booking Found";
 
         String liftPassText = (liftPass != null)
-                ? String.format("$%.2f - %d day pass",
-                        liftPass.calculatePrice(),
-                        liftPass.getNumberOfDays())
+                ? (liftPass.getNumberOfDays() == 30
+                        ? String.format("$%.2f - Season pass", liftPass.calculatePrice())
+                        : String.format("$%.2f - %d Day pass",
+                                liftPass.calculatePrice(),
+                                liftPass.getNumberOfDays()))
                 : "Not added";
 
         String lessonText = (lesson != null)
