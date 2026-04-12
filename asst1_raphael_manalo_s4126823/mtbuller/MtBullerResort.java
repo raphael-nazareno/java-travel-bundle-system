@@ -446,6 +446,11 @@ public class MtBullerResort {
             return;
         }
 
+        if (travelBundle.getLesson() != null) {
+            System.out.println("Lessons already added to this bundle.");
+            return;
+        }
+
         SkiingLevel level = travelBundle.getCustomer().getSkiingLevel();
 
         System.out.println("Enter number of lessons: ");
