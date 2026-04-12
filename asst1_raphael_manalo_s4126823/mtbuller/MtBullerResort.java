@@ -209,11 +209,17 @@ public class MtBullerResort {
 
         System.out.println("Enter your arrival date (YYYY-MM-DD): ");
         String startDate = scanner.nextLine();
+        LocalDate arrivalDate;
 
         try {
-            LocalDate.parse(startDate);
+            arrivalDate = LocalDate.parse(startDate);
         } catch (DateTimeParseException e) {
             System.out.println("Invalid date. Please enter the date in YYYY-MM-DD format.");
+            return;
+        }
+
+        if (arrivalDate.isBefore(LocalDate.now())) {
+            System.out.println("Invalid date. Arrival date cannot be in the past.");
             return;
         }
 
