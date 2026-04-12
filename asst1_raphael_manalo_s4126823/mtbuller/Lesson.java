@@ -13,6 +13,7 @@ public class Lesson implements Serializable, Pricable {
         this.numberOfLessons = numberOfLessons;
     }
 
+    @Override
     public double calculatePrice() {
         if (level == SkiingLevel.BEGINNER) {
             return 25 * numberOfLessons;
