@@ -173,6 +173,11 @@ public class MtBullerResort {
     }
 
     public void listAllAccommodations() {
+        if (accommodations.isEmpty()) {
+            System.out.println("No accommodations found.");
+            return;
+        }
+
         System.out.println("\nType | Name | ID | Price | Availability");
         System.out.println("--------------------------------------------------");
 
