@@ -94,6 +94,7 @@ public class TravelBundle implements Serializable {
         return totalPrice;
     }
 
+    @Override
     public String toString() {
         String customerName = customer.getCustomerName();
         int customerID = customer.getCustomerID();
