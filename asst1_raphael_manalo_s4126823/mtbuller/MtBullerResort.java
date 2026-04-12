@@ -282,6 +282,11 @@ public class MtBullerResort {
         // New Bundle Object
         TravelBundle bundle = new TravelBundle(customer, startDate, durationDays);
 
+        if (!hasAvailableAccommodations()) {
+            System.out.println("No accommodations are currently available.");
+            return;
+        }
+
         // User Input For Accommodation
         listAvailableAccommodations();
         System.out.println();
