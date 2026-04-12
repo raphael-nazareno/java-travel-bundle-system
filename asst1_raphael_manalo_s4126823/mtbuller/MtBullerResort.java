@@ -291,7 +291,7 @@ public class MtBullerResort {
             out.close();
             System.out.println("Bundles saved successfully.");
         } catch (IOException e) {
-            System.out.println("ERROR! Couldn't save bundle!");
+            System.out.println("ERROR! Couldn't save bundles: " + e.getMessage());
         }
     }
 
