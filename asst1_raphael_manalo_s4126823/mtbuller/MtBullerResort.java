@@ -458,6 +458,11 @@ public class MtBullerResort {
             return;
         }
 
+        if (numLessons > travelBundle.getDurationDays()) {
+            System.out.println("Invalid number of lessons. Lessons cannot exceed bundle duration.");
+            return;
+        }
+
         Lesson lesson = new Lesson(level, numLessons);
 
         travelBundle.addLessonToBundle(lesson);
