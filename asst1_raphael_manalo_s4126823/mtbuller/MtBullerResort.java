@@ -410,6 +410,12 @@ public class MtBullerResort {
             return;
         }
 
+        if (numberOfDays != 30 && numberOfDays > travelBundle.getDurationDays()) {
+            System.out.println(
+                    "Invalid lift pass length. Lift pass days cannot exceed bundle duration unless it is a season pass.");
+            return;
+        }
+
         LiftPass liftPass = new LiftPass(numberOfDays);
 
         travelBundle.addLiftPassToBundle(liftPass);
