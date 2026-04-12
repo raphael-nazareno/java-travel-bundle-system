@@ -88,7 +88,8 @@ public class MtBullerAdmin {
                 case 11:
 
                 case 12:
-
+                    resort.listAccommodationsByType();
+                    break;
                 case 13:
                     resort.listAccommodationsByMaxPrice();
                     break;
