@@ -89,6 +89,11 @@ public class MtBullerResort {
         System.out.println("Enter your name: ");
         String customerName = scanner.nextLine();
 
+        if (customerName.trim().isEmpty()) {
+            System.out.println("Invalid name. Name cannot be blank.");
+            return;
+        }
+
         System.out.println("Enter your age: ");
         String ageInput = scanner.nextLine();
         int customerAge;
