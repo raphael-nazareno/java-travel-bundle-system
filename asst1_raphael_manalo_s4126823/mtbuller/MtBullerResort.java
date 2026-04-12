@@ -307,6 +307,23 @@ public class MtBullerResort {
                 TravelBundle.updateNextID(bundle.getBundleID());
             }
 
+            for (Accommodation accommodation : accommodations) {
+                accommodation.setAvailable(true);
+            }
+
+            for (TravelBundle bundle : travelBundles) {
+                Accommodation bookedAccommodation = bundle.getAccommodation();
+
+                if (bookedAccommodation != null) {
+                    Accommodation currentAccommodation = findAccommodationById(bookedAccommodation.getID());
+
+                    if (currentAccommodation != null) {
+                        currentAccommodation.setAvailable(false);
+                        bundle.addAccommodationToBundle(currentAccommodation);
+                    }
+                }
+            }
+
             System.out.println("Bundles loaded successfully.");
             listBundles();
         } catch (IOException | ClassNotFoundException e) {
