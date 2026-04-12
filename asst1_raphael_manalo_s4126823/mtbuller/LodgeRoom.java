@@ -11,9 +11,4 @@ public class LodgeRoom extends Accommodation {
         return AccommodationType.LODGE_ROOM;
     }
 
-    @Override
-    public String toString() {
-        return "Lodge Room | " + super.toString();
-    }
-
 }
