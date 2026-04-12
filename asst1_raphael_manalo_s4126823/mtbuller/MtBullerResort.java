@@ -263,6 +263,41 @@ public class MtBullerResort {
         }
     }
 
+    public void listAccommodationsByType() {
+        System.out.println("Enter accommodation type (HOTEL_ROOM, APARTMENT, or LODGE_ROOM): ");
+        String typeInput = scanner.nextLine().trim();
+
+        if (typeInput.isEmpty()) {
+            System.out.println("Invalid accommodation type. Type cannot be blank.");
+            return;
+        }
+
+        AccommodationType type;
+
+        try {
+            type = AccommodationType.valueOf(typeInput.toUpperCase());
+        } catch (IllegalArgumentException e) {
+            System.out.println("Invalid accommodation type. Please enter HOTEL_ROOM, APARTMENT, or LODGE_ROOM.");
+            return;
+        }
+
+        boolean found = false;
+
+        System.out.println("\nType | Name | ID | Price | Availability");
+        System.out.println("--------------------------------------------------");
+
+        for (Accommodation accommodation : accommodations) {
+            if (accommodation.getAccommodationType() == type) {
+                System.out.println(accommodation);
+                found = true;
+            }
+        }
+
+        if (!found) {
+            System.out.println("No accommodations found for that type.");
+        }
+    }
+
     public Accommodation findAccommodationById(int id) {
         for (Accommodation a : accommodations) {
             if (a.getID() == id) {
