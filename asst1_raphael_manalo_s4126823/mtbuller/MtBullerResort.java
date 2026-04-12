@@ -339,7 +339,7 @@ public class MtBullerResort {
         }
 
         // New Bundle Object
-        TravelBundle bundle = new TravelBundle(customer, startDate, durationDays);
+        TravelBundle bundle = new TravelBundle(customer, arrivalDate, durationDays);
 
         // Add accommodation to Bundle and set accommodation to Unavailable
         bundle.addAccommodationToBundle(accommodation);
