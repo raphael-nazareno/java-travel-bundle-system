@@ -99,8 +99,8 @@ public class MtBullerAdmin {
                     break;
                 case 15:
                     System.out.println("Exiting program...");
-                    System.exit(0);
-                    break;
+                    scanner.close();
+                    return;
                 default:
                     System.out.println("Invalid option. Please try again.");
                     break;
