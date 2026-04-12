@@ -424,7 +424,7 @@ public class MtBullerResort {
         }
 
         System.out.println("Enter Lift Pass length in days: ");
-        String daysInput = scanner.nextLine();
+        String daysInput = scanner.nextLine().trim();
 
         if (daysInput.isEmpty()) {
             System.out.println("Invalid lift pass length. Days cannot be blank.");
@@ -490,7 +490,13 @@ public class MtBullerResort {
         SkiingLevel level = travelBundle.getCustomer().getSkiingLevel();
 
         System.out.println("Enter number of lessons: ");
-        String lessonsInput = scanner.nextLine();
+        String lessonsInput = scanner.nextLine().trim();
+
+        if (lessonsInput.isEmpty()) {
+            System.out.println("Invalid number of lessons. Lesson count cannot be blank.");
+            return;
+        }
+
         int numLessons;
 
         try {
