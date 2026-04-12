@@ -191,6 +191,23 @@ public class MtBullerResort {
         }
     }
 
+    public void listAccommodationsSortedByPrice() {
+        if (accommodations.isEmpty()) {
+            System.out.println("No accommodations found.");
+            return;
+        }
+
+        ArrayList<Accommodation> sortedAccommodations = new ArrayList<>(accommodations);
+        sortedAccommodations.sort(Comparator.comparingDouble(Accommodation::getPricePerNight));
+
+        System.out.println("\nType | Name | ID | Price | Availability");
+        System.out.println("--------------------------------------------------");
+
+        for (Accommodation accommodation : sortedAccommodations) {
+            System.out.println(accommodation);
+        }
+    }
+
     public void listAvailableAccommodations() {
         if (!hasAvailableAccommodations()) {
             System.out.println("No accommodations are currently available.");
