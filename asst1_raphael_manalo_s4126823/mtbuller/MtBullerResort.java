@@ -148,6 +148,11 @@ public class MtBullerResort {
     }
 
     public void listCustomers() {
+        if (customers.isEmpty()) {
+            System.out.println("No customers found.");
+            return;
+        }
+
         for (Customer c : customers) {
             System.out.println(c);
         }
