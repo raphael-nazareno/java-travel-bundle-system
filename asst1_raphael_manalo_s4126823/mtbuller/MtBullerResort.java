@@ -223,6 +223,46 @@ public class MtBullerResort {
             }
     }
 
+    public void listAccommodationsByMaxPrice() {
+        System.out.println("Enter maximum price per night: ");
+        String maxPriceInput = scanner.nextLine().trim();
+
+        if (maxPriceInput.isEmpty()) {
+            System.out.println("Invalid price. Maximum price cannot be blank.");
+            return;
+        }
+
+        double maxPrice;
+
+        try {
+            maxPrice = Double.parseDouble(maxPriceInput);
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid price. Please enter a valid number.");
+            return;
+        }
+
+        if (maxPrice < 0) {
+            System.out.println("Invalid price. Maximum price cannot be negative.");
+            return;
+        }
+
+        boolean found = false;
+
+        System.out.println("\nType | Name | ID | Price | Availability");
+        System.out.println("--------------------------------------------------");
+
+        for (Accommodation accommodation : accommodations) {
+            if (accommodation.getPricePerNight() <= maxPrice) {
+                System.out.println(accommodation);
+                found = true;
+            }
+        }
+
+        if (!found) {
+            System.out.println("No accommodations found within that price range.");
+        }
+    }
+
     public Accommodation findAccommodationById(int id) {
         for (Accommodation a : accommodations) {
             if (a.getID() == id) {
