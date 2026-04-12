@@ -5,8 +5,8 @@ import java.io.Serializable;
 public class Lesson implements Serializable, Pricable {
     private static final long serialVersionUID = 1L;
 
-    private SkiingLevel level;
-    private int numberOfLessons;
+    private final SkiingLevel level;
+    private final int numberOfLessons;
 
     public Lesson(SkiingLevel level, int numberOfLessons) {
         this.level = level;
