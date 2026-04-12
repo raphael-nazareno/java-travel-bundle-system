@@ -425,6 +425,12 @@ public class MtBullerResort {
 
         System.out.println("Enter Lift Pass length in days: ");
         String daysInput = scanner.nextLine();
+
+        if (daysInput.isEmpty()) {
+            System.out.println("Invalid lift pass length. Days cannot be blank.");
+            return;
+        }
+
         int numberOfDays;
 
         try {
