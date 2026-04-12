@@ -34,6 +34,7 @@ public abstract class Accommodation implements Serializable, Pricable, Bookable 
         this.available = available;
     }
 
+    @Override
     public boolean isAvailable() {
         return this.available;
     }
