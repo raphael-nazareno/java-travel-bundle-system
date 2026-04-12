@@ -307,6 +307,14 @@ public class MtBullerResort {
                 TravelBundle.updateNextID(bundle.getBundleID());
             }
 
+            for (TravelBundle bundle : travelBundles) {
+                Customer loadedCustomer = bundle.getCustomer();
+
+                if (loadedCustomer != null) {
+                    Customer.updateNextID(loadedCustomer.getCustomerID());
+                }
+            }
+
             for (Accommodation accommodation : accommodations) {
                 accommodation.setAvailable(true);
             }
