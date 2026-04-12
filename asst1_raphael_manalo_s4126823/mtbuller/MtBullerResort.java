@@ -209,6 +209,12 @@ public class MtBullerResort {
 
         System.out.println("Enter your arrival date (YYYY-MM-DD): ");
         String startDate = scanner.nextLine();
+
+        if (startDate.isEmpty()) {
+            System.out.println("Invalid date. Arrival date cannot be blank.");
+            return;
+        }
+
         LocalDate arrivalDate;
 
         try {
