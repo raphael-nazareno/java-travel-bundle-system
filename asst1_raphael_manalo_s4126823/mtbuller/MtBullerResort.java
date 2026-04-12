@@ -195,6 +195,16 @@ public class MtBullerResort {
         return null;
     }
 
+    private boolean hasAvailableAccommodations() {
+        for (Accommodation accommodation : accommodations) {
+            if (accommodation.isAvailable()) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
     // Travel Bundle Methods
     public void addBundle(TravelBundle b) {
         travelBundles.add(b);
