@@ -47,7 +47,7 @@ public abstract class Accommodation implements Serializable, Pricable {
     public String toString() {
         String availabilityText = available ? "Yes" : "No";
 
-        return String.format("%s | ID: %d | Price: %.2f | Availability %s",
+        return String.format("%s | ID: %d | Price: %.2f | Availability: %s",
                 name, id, pricePerNight, availabilityText);
     }
 }
