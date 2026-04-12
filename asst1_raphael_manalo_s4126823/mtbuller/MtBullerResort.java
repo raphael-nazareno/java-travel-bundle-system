@@ -220,6 +220,10 @@ public class MtBullerResort {
         return false;
     }
 
+    private void markAsUnavailable(Bookable bookable) {
+        bookable.setAvailable(false);
+    }
+
     // Travel Bundle Methods
     public void addBundle(TravelBundle b) {
         travelBundles.add(b);
