@@ -10,8 +10,4 @@ public class Apartment extends Accommodation {
         return AccommodationType.APARTMENT;
     }
 
-    @Override
-    public String toString() {
-        return "Apartment  | " + super.toString();
-    }
 }
