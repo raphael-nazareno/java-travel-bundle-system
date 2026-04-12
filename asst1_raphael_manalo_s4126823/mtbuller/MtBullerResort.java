@@ -87,7 +87,7 @@ public class MtBullerResort {
 
     public void createCustomer() {
         System.out.println("Enter your name: ");
-        String customerName = scanner.nextLine();
+        String customerName = scanner.nextLine().trim();
 
         if (customerName.trim().isEmpty()) {
             System.out.println("Invalid name. Name cannot be blank.");
@@ -111,7 +111,7 @@ public class MtBullerResort {
         }
 
         System.out.println("Enter your gender: ");
-        String customerGender = scanner.nextLine();
+        String customerGender = scanner.nextLine().trim();
 
         if (customerGender.trim().isEmpty()) {
             System.out.println("Invalid gender. Gender cannot be blank.");
