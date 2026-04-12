@@ -5,13 +5,13 @@ import java.io.Serializable;
 public class Customer implements Serializable {
     private static final long serialVersionUID = 1L;
 
-    private int customerID;
+    private final int customerID;
     private static int nextID = 1;
 
-    private String customerName;
-    private String customerGender;
-    private int customerAge;
-    private SkiingLevel skiingLevel;
+    private final String customerName;
+    private final String customerGender;
+    private final int customerAge;
+    private final SkiingLevel skiingLevel;
 
     public Customer(String customerName, int customerAge, String customerGender,
             SkiingLevel SkiingLevel) {
