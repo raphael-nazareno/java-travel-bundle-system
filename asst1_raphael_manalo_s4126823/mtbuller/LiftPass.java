@@ -5,7 +5,7 @@ import java.io.Serializable;
 public class LiftPass implements Serializable, Pricable {
     private static final long serialVersionUID = 1L;
 
-    private int numberOfDays;
+    private final int numberOfDays;
 
     public LiftPass(int numberOfDays) {
         this.numberOfDays = numberOfDays;
