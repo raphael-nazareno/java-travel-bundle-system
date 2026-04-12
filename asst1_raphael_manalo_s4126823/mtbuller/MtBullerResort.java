@@ -113,6 +113,11 @@ public class MtBullerResort {
         System.out.println("Enter your gender: ");
         String customerGender = scanner.nextLine();
 
+        if (customerGender.trim().isEmpty()) {
+            System.out.println("Invalid gender. Gender cannot be blank.");
+            return;
+        }
+
         System.out.println("Enter your Skiing Experience (Beginner, Intermediate or Expert): ");
         String levelInput = scanner.nextLine();
         SkiingLevel level;
