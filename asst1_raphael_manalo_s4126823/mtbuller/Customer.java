@@ -28,6 +28,12 @@ public class Customer implements Serializable {
         return this.customerID;
     }
 
+    public static void updateNextID(int loadedCustomerID) {
+        if (loadedCustomerID >= nextID) {
+            nextID = loadedCustomerID + 1;
+        }
+    }
+
     public String getCustomerName() {
         return this.customerName;
     }
