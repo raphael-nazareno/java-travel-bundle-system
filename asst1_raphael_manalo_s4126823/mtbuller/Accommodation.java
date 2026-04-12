@@ -42,6 +42,8 @@ public abstract class Accommodation implements Serializable, Pricable {
         return this.name;
     }
 
+    public abstract AccommodationType getAccommodationType();
+
     @Override
     public String toString() {
         String availabilityText = available ? "Yes" : "No";
