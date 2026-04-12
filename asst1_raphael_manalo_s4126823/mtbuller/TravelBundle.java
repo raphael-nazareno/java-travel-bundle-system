@@ -38,6 +38,10 @@ public class TravelBundle implements Serializable {
         return this.accommodation;
     }
 
+    public LiftPass getLiftPass() {
+        return this.liftPass;
+    }
+
     public void addAccommodationToBundle(Accommodation a) {
         this.accommodation = a;
     }
