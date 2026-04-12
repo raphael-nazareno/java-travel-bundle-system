@@ -448,6 +448,39 @@ public class MtBullerResort {
 
     }
 
+    public void cancelBundle() {
+        System.out.println("Enter Bundle ID to cancel: ");
+        String bundleIdInput = scanner.nextLine().trim();
+
+        if (bundleIdInput.isEmpty()) {
+            System.out.println("Invalid bundle ID. Bundle ID cannot be blank.");
+            return;
+        }
+
+        int bundleID;
+
+        try {
+            bundleID = Integer.parseInt(bundleIdInput);
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid bundle ID. Please enter a whole number.");
+            return;
+        }
+
+        TravelBundle bundle = findBundleById(bundleID);
+        if (bundle == null) {
+            System.out.println("Bundle not found!");
+            return;
+        }
+
+        Accommodation accommodation = bundle.getAccommodation();
+        if (accommodation != null) {
+            accommodation.setAvailable(true);
+        }
+
+        travelBundles.remove(bundle);
+        System.out.println("Bundle cancelled successfully.");
+    }
+
     public void listBundles() {
         if (travelBundles.isEmpty()) {
             System.out.println("No bundles found!");
