@@ -1,8 +1,6 @@
 package mtbuller;
 
-import java.io.Serializable;
-
-public class Lesson implements Serializable, Pricable {
+public class Lesson extends BundleItem {
     private static final long serialVersionUID = 1L;
 
     private final SkiingLevel level;

@@ -80,6 +80,14 @@ public class TravelBundle implements Serializable {
         return accommodation.calculatePrice() * durationDays;
     }
 
+    private double calculateBundleItemPrice(BundleItem item) {
+        if (item == null) {
+            return 0.0;
+        }
+
+        return item.calculatePrice();
+    }
+
     private double calculateTotalPrice() {
         double totalPrice = calculateAccommodationCost();
 
