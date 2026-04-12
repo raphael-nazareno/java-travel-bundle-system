@@ -375,7 +375,7 @@ public class MtBullerResort {
         }
     }
 
-    // Lift Pass Methods
+    // Lift Pass Method
     public void addLiftPassToBundle() {
         System.out.println("Enter Bundle ID: ");
         String bundleIdInput = scanner.nextLine();
@@ -391,6 +391,11 @@ public class MtBullerResort {
         TravelBundle travelBundle = findBundleById(bundleID);
         if (travelBundle == null) {
             System.out.println("Bundle not found!");
+            return;
+        }
+
+        if (travelBundle.getLiftPass() != null) {
+            System.out.println("Lift pass already added to this bundle.");
             return;
         }
 
@@ -422,6 +427,7 @@ public class MtBullerResort {
         System.out.println("Lift pass added successfully.");
     }
 
+    // Lesson Method
     public void addLessonToBundle() {
         System.out.println("Enter Bundle ID: ");
         String bundleIdInput = scanner.nextLine();
