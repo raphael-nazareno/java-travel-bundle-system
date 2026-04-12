@@ -396,7 +396,7 @@ public class MtBullerResort {
     // Lift Pass Method
     public void addLiftPassToBundle() {
         System.out.println("Enter Bundle ID: ");
-        String bundleIdInput = scanner.nextLine();
+        String bundleIdInput = scanner.nextLine().trim();
 
         if (bundleIdInput.isEmpty()) {
             System.out.println("Invalid bundle ID. Bundle ID cannot be blank.");
@@ -454,7 +454,13 @@ public class MtBullerResort {
     // Lesson Method
     public void addLessonToBundle() {
         System.out.println("Enter Bundle ID: ");
-        String bundleIdInput = scanner.nextLine();
+        String bundleIdInput = scanner.nextLine().trim();
+
+        if (bundleIdInput.isEmpty()) {
+            System.out.println("Invalid bundle ID. Bundle ID cannot be blank.");
+            return;
+        }
+
         int bundleID;
 
         try {
