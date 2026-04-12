@@ -177,6 +177,11 @@ public class MtBullerResort {
     }
 
     public void listAvailableAccommodations() {
+        if (!hasAvailableAccommodations()) {
+            System.out.println("No accommodations are currently available.");
+            return;
+        }
+
         System.out.println("\nType | Name | ID | Price | Availability");
         System.out.println("--------------------------------------------------");
 
