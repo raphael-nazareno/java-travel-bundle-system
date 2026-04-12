@@ -153,6 +153,9 @@ public class MtBullerResort {
             return;
         }
 
+        System.out.println("\nCustomer ID | Name | Age | Gender | Level");
+        System.out.println("--------------------------------------------------");
+
         for (Customer c : customers) {
             System.out.println(c);
         }
