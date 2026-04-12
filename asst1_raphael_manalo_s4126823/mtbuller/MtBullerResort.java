@@ -192,6 +192,12 @@ public class MtBullerResort {
         // User Input for Bundle
         System.out.println("Enter your customer ID: ");
         String customerIdInput = scanner.nextLine();
+
+        if (customerIdInput.isEmpty()) {
+            System.out.println("Invalid customer ID. Customer ID cannot be blank.");
+            return;
+        }
+
         int customerID;
 
         try {
