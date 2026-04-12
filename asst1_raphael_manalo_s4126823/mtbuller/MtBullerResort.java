@@ -259,6 +259,12 @@ public class MtBullerResort {
         System.out.println();
         System.out.println("Enter Accommodation ID from the list above: ");
         String accommodationIdInput = scanner.nextLine();
+
+        if (accommodationIdInput.isEmpty()) {
+            System.out.println("Invalid accommodation ID. Accommodation ID cannot be blank.");
+            return;
+        }
+
         int accommodationID;
 
         try {
