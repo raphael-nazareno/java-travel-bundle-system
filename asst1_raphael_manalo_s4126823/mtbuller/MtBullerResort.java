@@ -295,13 +295,8 @@ public class MtBullerResort {
 
     @SuppressWarnings("unchecked")
     public void readBundlesFromFile() {
-        try {
-            ObjectInputStream in = new ObjectInputStream(new FileInputStream("bundles.dat"));
-
+        try (ObjectInputStream in = new ObjectInputStream(new FileInputStream("bundles.dat"))) {
             travelBundles = (ArrayList<TravelBundle>) in.readObject();
-
-            in.close();
-
             System.out.println("Bundles loaded successfully.");
             listBundles();
         } catch (IOException | ClassNotFoundException e) {
