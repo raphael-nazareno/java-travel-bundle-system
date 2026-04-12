@@ -46,6 +46,12 @@ public class TravelBundle implements Serializable {
         return this.bundleID;
     }
 
+    public static void updateNextID(int loadedBundleID) {
+        if (loadedBundleID >= nextID) {
+            nextID = loadedBundleID + 1;
+        }
+    }
+
     private double calculateAccommodationCost() {
         if (accommodation == null) {
             return 0.0;
