@@ -177,6 +177,19 @@ java mtbuller.MtBullerAdmin.java
 
 This project was developed with assistance from AI tools (ChatGPT) for guidance, debugging, and concept clarification. All code has been reviewed, understood, and adapted by the author.
 
+## Resources
+
+The following resources were used to support the development of this project:
+
+- **Java Full Course for Beginners** - YouTube  
+  https://www.youtube.com/watch?v=eIrMbAQSU34
+
+- **W3Schools Java Tutorial**  
+  https://www.w3schools.com/java/default.asp
+
+- **RMIT University, COSC2395 Programming A**  
+  Course lectures and lab materials.
+  
 ## Author
 
 Raphael Manalo
