@@ -34,7 +34,7 @@ public class MtBullerAdmin {
             System.out.println("11. Quit");
 
             System.out.print("Select an option: ");
-            String input = scanner.nextLine();
+            String input = scanner.nextLine().trim();
             int choice;
 
             try {
