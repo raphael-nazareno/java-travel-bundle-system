@@ -91,13 +91,8 @@ public class TravelBundle implements Serializable {
     private double calculateTotalPrice() {
         double totalPrice = calculateAccommodationCost();
 
-        if (liftPass != null) {
-            totalPrice += liftPass.calculatePrice();
-        }
-
-        if (lesson != null) {
-            totalPrice += lesson.calculatePrice();
-        }
+        totalPrice += calculateBundleItemPrice(liftPass);
+        totalPrice += calculateBundleItemPrice(lesson);
 
         return totalPrice;
     }
