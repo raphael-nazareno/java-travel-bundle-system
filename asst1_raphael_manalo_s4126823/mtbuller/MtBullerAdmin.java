@@ -86,7 +86,8 @@ public class MtBullerAdmin {
                     resort.readBundlesFromFile();
                     break;
                 case 11:
-
+                    resort.cancelBundle();
+                    break;
                 case 12:
                     resort.listAccommodationsByType();
                     break;
