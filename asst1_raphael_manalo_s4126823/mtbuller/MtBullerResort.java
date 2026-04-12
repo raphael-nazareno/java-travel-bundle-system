@@ -119,7 +119,7 @@ public class MtBullerResort {
         }
 
         System.out.println("Enter your Skiing Experience (Beginner, Intermediate or Expert): ");
-        String levelInput = scanner.nextLine();
+        String levelInput = scanner.nextLine().trim();
         SkiingLevel level;
         try {
             level = SkiingLevel.valueOf(levelInput.toUpperCase());
