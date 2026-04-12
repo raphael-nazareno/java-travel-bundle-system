@@ -297,6 +297,11 @@ public class MtBullerResort {
     public void readBundlesFromFile() {
         try (ObjectInputStream in = new ObjectInputStream(new FileInputStream("bundles.dat"))) {
             travelBundles = (ArrayList<TravelBundle>) in.readObject();
+
+            for (TravelBundle bundle : travelBundles) {
+                TravelBundle.updateNextID(bundle.getBundleID());
+            }
+
             System.out.println("Bundles loaded successfully.");
             listBundles();
         } catch (IOException | ClassNotFoundException e) {
