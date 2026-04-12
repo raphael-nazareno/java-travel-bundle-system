@@ -30,6 +30,7 @@ public abstract class Accommodation implements Serializable, Pricable, Bookable 
         return this.pricePerNight;
     }
 
+    @Override
     public void setAvailable(boolean available) {
         this.available = available;
     }
