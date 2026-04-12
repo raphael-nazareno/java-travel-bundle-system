@@ -1,8 +1,6 @@
 package mtbuller;
 
-import java.io.Serializable;
-
-public class LiftPass implements Serializable, Pricable {
+public class LiftPass extends BundleItem {
     private static final long serialVersionUID = 1L;
 
     private final int numberOfDays;
