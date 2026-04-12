@@ -10,9 +10,4 @@ public class HotelRoom extends Accommodation {
     public AccommodationType getAccommodationType() {
         return AccommodationType.HOTEL_ROOM;
     }
-
-    @Override
-    public String toString() {
-        return "Hotel Room | " + super.toString();
-    }
 }
