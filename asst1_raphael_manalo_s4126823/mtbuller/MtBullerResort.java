@@ -12,6 +12,8 @@ import java.util.Scanner;
 import java.time.LocalDate;
 import java.time.format.DateTimeParseException;
 
+import java.util.Comparator;
+
 public class MtBullerResort {
     private ArrayList<Customer> customers;
     private ArrayList<Accommodation> accommodations;
