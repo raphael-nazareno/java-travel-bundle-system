@@ -95,7 +95,13 @@ public class MtBullerResort {
         }
 
         System.out.println("Enter your age: ");
-        String ageInput = scanner.nextLine();
+        String ageInput = scanner.nextLine().trim();
+
+        if (ageInput.isEmpty()) {
+            System.out.println("Invalid age. Age cannot be blank.");
+            return;
+        }
+
         int customerAge;
 
         try {
