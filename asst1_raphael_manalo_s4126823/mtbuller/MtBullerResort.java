@@ -284,9 +284,6 @@ public class MtBullerResort {
             return;
         }
 
-        // New Bundle Object
-        TravelBundle bundle = new TravelBundle(customer, startDate, durationDays);
-
         if (!hasAvailableAccommodations()) {
             System.out.println("No accommodations are currently available.");
             return;
@@ -326,6 +323,9 @@ public class MtBullerResort {
             System.out.println(e.getMessage());
             return;
         }
+
+        // New Bundle Object
+        TravelBundle bundle = new TravelBundle(customer, startDate, durationDays);
 
         // Add accommodation to Bundle and set accommodation to Unavailable
         bundle.addAccommodationToBundle(accommodation);
