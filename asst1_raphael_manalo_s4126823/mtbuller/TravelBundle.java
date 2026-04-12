@@ -18,7 +18,7 @@ public class TravelBundle implements Serializable {
     private LiftPass liftPass;
     private Lesson lesson;
 
-    public TravelBundle(Customer customer, String startDate, int durationDays) {
+    public TravelBundle(Customer customer, LocalDate startDate, int durationDays) {
         this.bundleID = nextID++;
 
         this.customer = customer;
