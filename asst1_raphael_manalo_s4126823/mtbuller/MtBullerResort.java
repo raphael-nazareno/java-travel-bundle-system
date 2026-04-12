@@ -397,6 +397,12 @@ public class MtBullerResort {
     public void addLiftPassToBundle() {
         System.out.println("Enter Bundle ID: ");
         String bundleIdInput = scanner.nextLine();
+
+        if (bundleIdInput.isEmpty()) {
+            System.out.println("Invalid bundle ID. Bundle ID cannot be blank.");
+            return;
+        }
+
         int bundleID;
 
         try {
