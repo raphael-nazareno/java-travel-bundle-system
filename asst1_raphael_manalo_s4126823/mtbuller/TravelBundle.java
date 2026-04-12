@@ -97,7 +97,7 @@ public class TravelBundle implements Serializable {
                 ? String.format("$%.2f - %d day pass",
                         liftPass.calculatePrice(),
                         liftPass.getNumberOfDays())
-                : "N/A";
+                : "Not added";
 
         String lessonText = (lesson != null)
                 ? String.format("$%.2f - %d %s lesson%s",
@@ -105,7 +105,7 @@ public class TravelBundle implements Serializable {
                         lesson.getNumberOfLessons(),
                         lesson.getLevel().toString().toLowerCase(),
                         lesson.getNumberOfLessons() > 1 ? "s" : "")
-                : "No Lesson";
+                : "Not added";
 
         String totalPriceText = String.format("$%.2f", calculateTotalPrice());
 
