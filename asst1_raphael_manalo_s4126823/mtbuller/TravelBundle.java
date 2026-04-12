@@ -102,7 +102,7 @@ public class TravelBundle implements Serializable {
                 : "Not added";
 
         String lessonText = (lesson != null)
-                ? String.format("$%.2f - %d %s lesson%s",
+                ? String.format("$%.2f - %d %s level lesson%s",
                         lesson.calculatePrice(),
                         lesson.getNumberOfLessons(),
                         lesson.getLevel().toString().toLowerCase(),
