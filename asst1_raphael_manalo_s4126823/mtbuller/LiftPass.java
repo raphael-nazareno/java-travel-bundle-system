@@ -11,6 +11,7 @@ public class LiftPass implements Serializable, Pricable {
         this.numberOfDays = numberOfDays;
     }
 
+    @Override
     public double calculatePrice() {
         if (numberOfDays == 30) {
             return 200.0;
