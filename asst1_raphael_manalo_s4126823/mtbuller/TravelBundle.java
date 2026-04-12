@@ -54,6 +54,10 @@ public class TravelBundle implements Serializable {
         return this.bundleID;
     }
 
+    public int getDurationDays() {
+        return this.durationDays;
+    }
+
     public static void updateNextID(int loadedBundleID) {
         if (loadedBundleID >= nextID) {
             nextID = loadedBundleID + 1;
