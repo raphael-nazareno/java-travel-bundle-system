@@ -285,10 +285,8 @@ public class MtBullerResort {
     }
 
     public void saveBundlesToFile() {
-        try {
-            ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("bundles.dat"));
+        try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("bundles.dat"))) {
             out.writeObject(travelBundles);
-            out.close();
             System.out.println("Bundles saved successfully.");
         } catch (IOException e) {
             System.out.println("ERROR! Couldn't save bundles: " + e.getMessage());
