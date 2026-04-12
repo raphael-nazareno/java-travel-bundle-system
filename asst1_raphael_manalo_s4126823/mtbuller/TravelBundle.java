@@ -5,11 +5,11 @@ import java.io.Serializable;
 public class TravelBundle implements Serializable {
     private static final long serialVersionUID = 1L;
 
-    private int bundleID;
+    private final int bundleID;
     private static int nextID = 1;
 
-    private String startDate;
-    private int durationDays;
+    private final String startDate;
+    private final int durationDays;
 
     private Customer customer;
     private Accommodation accommodation;
