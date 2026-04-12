@@ -131,7 +131,7 @@ public class MtBullerResort {
         Customer customer = new Customer(customerName, customerAge, customerGender, level);
 
         addCustomer(customer);
-        System.out.println("Customer information succesfully added!");
+        System.out.println("Customer information successfully added!");
 
     }
 
