@@ -9,7 +9,7 @@ public class TravelBundle implements Serializable {
     private final int bundleID;
     private static int nextID = 1;
 
-    private final String startDate;
+    private final LocalDate startDate;
     private final int durationDays;
 
     private Customer customer;
