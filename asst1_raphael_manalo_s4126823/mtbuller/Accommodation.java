@@ -2,7 +2,7 @@ package mtbuller;
 
 import java.io.Serializable;
 
-public abstract class Accommodation implements Serializable, Pricable {
+public abstract class Accommodation implements Serializable, Pricable, Bookable {
     private static final long serialVersionUID = 1L;
 
     private final int id;
