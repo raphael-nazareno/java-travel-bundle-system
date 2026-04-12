@@ -5,11 +5,10 @@ import java.io.Serializable;
 public abstract class Accommodation implements Serializable, Pricable {
     private static final long serialVersionUID = 1L;
 
-    private int id;
-    private double pricePerNight;
+    private final int id;
+    private final double pricePerNight;
     private boolean available;
-
-    private String name;
+    private final String name;
 
     public Accommodation(int id, double pricePerNight, String name) {
         this.id = id;
