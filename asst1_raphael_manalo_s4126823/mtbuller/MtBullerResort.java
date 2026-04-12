@@ -191,7 +191,7 @@ public class MtBullerResort {
     public void createBundle() {
         // User Input for Bundle
         System.out.println("Enter your customer ID: ");
-        String customerIdInput = scanner.nextLine();
+        String customerIdInput = scanner.nextLine().trim();
 
         if (customerIdInput.isEmpty()) {
             System.out.println("Invalid customer ID. Customer ID cannot be blank.");
@@ -214,7 +214,7 @@ public class MtBullerResort {
         }
 
         System.out.println("Enter your arrival date (YYYY-MM-DD): ");
-        String startDate = scanner.nextLine();
+        String startDate = scanner.nextLine().trim();
 
         if (startDate.isEmpty()) {
             System.out.println("Invalid date. Arrival date cannot be blank.");
@@ -236,7 +236,13 @@ public class MtBullerResort {
         }
 
         System.out.println("Enter stay duration in days: ");
-        String durationInput = scanner.nextLine();
+        String durationInput = scanner.nextLine().trim();
+
+        if (durationInput.isEmpty()) {
+            System.out.println("Invalid duration. Duration cannot be blank.");
+            return;
+        }
+
         int durationDays;
 
         try {
