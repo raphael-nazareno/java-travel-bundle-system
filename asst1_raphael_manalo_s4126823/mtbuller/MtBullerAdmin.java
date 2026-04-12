@@ -92,7 +92,8 @@ public class MtBullerAdmin {
                 case 13:
 
                 case 14:
-
+                    resort.listAccommodationsSortedByPrice();
+                    break;
                 case 15:
                     System.out.println("Exiting program...");
                     System.exit(0);
