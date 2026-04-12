@@ -31,7 +31,15 @@ public class MtBullerAdmin {
 
             System.out.println("10. Read bundles from file");
 
-            System.out.println("11. Quit");
+            System.out.println("11. Cancel a bundle");
+
+            System.out.println("12. Filter accommodations by type");
+
+            System.out.println("13. Filter accommodations by maximum price");
+
+            System.out.println("14. Sort accommodations by price");
+
+            System.out.println("15. Quit");
 
             System.out.print("Select an option: ");
             String input = scanner.nextLine().trim();
@@ -40,7 +48,7 @@ public class MtBullerAdmin {
             try {
                 choice = Integer.parseInt(input);
             } catch (NumberFormatException e) {
-                System.out.println("Invalid input. Please enter a number from 1 to 11.");
+                System.out.println("Invalid input. Please enter a number from 1 to 15.");
                 continue;
             }
 
@@ -78,6 +86,14 @@ public class MtBullerAdmin {
                     resort.readBundlesFromFile();
                     break;
                 case 11:
+
+                case 12:
+
+                case 13:
+
+                case 14:
+
+                case 15:
                     System.out.println("Exiting program...");
                     System.exit(0);
                     break;
