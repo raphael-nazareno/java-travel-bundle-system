@@ -30,6 +30,10 @@ public class TravelBundle implements Serializable {
         return this.customer;
     }
 
+    public Accommodation getAccommodation() {
+        return this.accommodation;
+    }
+
     public void addAccommodationToBundle(Accommodation a) {
         this.accommodation = a;
     }
