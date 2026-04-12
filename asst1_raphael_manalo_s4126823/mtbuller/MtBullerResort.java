@@ -343,7 +343,7 @@ public class MtBullerResort {
 
         // Add accommodation to Bundle and set accommodation to Unavailable
         bundle.addAccommodationToBundle(accommodation);
-        accommodation.setAvailable(false);
+        markAsUnavailable(accommodation);
 
         // Adds newly created bundle to bundle array
         addBundle(bundle);
